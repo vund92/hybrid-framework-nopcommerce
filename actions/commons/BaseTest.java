@@ -45,8 +45,7 @@ public class BaseTest {
 			driver = new EdgeDriver();
 		} else if (browserName.equals("opera")) {
 			//System.setProperty("webdriver.opera.driver", projectPath + "\\browserDrivers\\operadriver.exe");
-			WebDriverManager.operadriver().setup();
-			driver = new OperaDriver();
+			driver = WebDriverManager.operadriver().create();
 		} else if (browserName.equals("coccoc")) {
 			// Cốc Cốc brwoser trừ đi 5-6 version ra chromedriver
 			//System.setProperty("webdriver.chrome.driver", projectPath + "\\browserDrivers\\chromedriver_113.exe");
@@ -66,9 +65,7 @@ public class BaseTest {
 		}
 		
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		//Mở URL lên nó qua trang HomePage
 		driver.get("https://demo.nopcommerce.com/");
-		
 		return driver;
 	}
 }

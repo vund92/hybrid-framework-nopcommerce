@@ -15,9 +15,14 @@ public class LoginPageObject extends BasePage {
 		System.out.println("Driver at Class LoginPageObject = " + driver.toString());
 	}
 
-	public void clickToLoginButton() {
+	public HomePageObject clickToLoginButton() {
 		waitForElementClickable(driver, LoginPageUI.LOGIN_BUTTON);
 		clickToElement(driver, LoginPageUI.LOGIN_BUTTON);
+		//Cach 2
+		//return new HomePageObject(driver);
+		
+		//Cach 3
+		return PageGeneratorManager.getHomePage(driver);
 	}
 
 	public String getErrorMessageAtEmailTextbox() {
