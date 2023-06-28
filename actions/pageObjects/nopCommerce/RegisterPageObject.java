@@ -1,9 +1,9 @@
-package pageObjects;
+package pageObjects.nopCommerce;
 
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
-import pageUIs.RegisterPageUI;
+import pageUIs.nopCommerce.RegisterPageUI;
 
 public class RegisterPageObject extends BasePage {
 	
@@ -11,7 +11,6 @@ public class RegisterPageObject extends BasePage {
 
 	public RegisterPageObject(WebDriver driver) {
 		this.driver = driver;
-		System.out.println("Driver at Class RegisterPageObject = " + driver.toString());
 	}
 
 	public void clickToRegisterButton() {

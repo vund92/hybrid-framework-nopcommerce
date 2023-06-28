@@ -6,11 +6,11 @@ import com.beust.jcommander.Parameter;
 
 import commons.BasePage;
 import commons.BaseTest;
-import pageObjects.HomePageObject;
-import pageObjects.LoginPageObject;
-import pageObjects.MyAccountPageObject;
-import pageObjects.PageGeneratorManager;
-import pageObjects.RegisterPageObject;
+import pageObjects.nopCommerce.CustomerInfoPageObject;
+import pageObjects.nopCommerce.HomePageObject;
+import pageObjects.nopCommerce.LoginPageObject;
+import pageObjects.nopCommerce.PageGeneratorManager;
+import pageObjects.nopCommerce.RegisterPageObject;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -30,7 +30,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest{
 	private HomePageObject homePage;
 	private RegisterPageObject registerPage;
 	private LoginPageObject loginPage;
-	private MyAccountPageObject myAccountPage;
+	private CustomerInfoPageObject myAccountPage;
 	private String firstName, lastName, invalidEmail, notFoundEmail, existingEmail, validPassword, invalidPassword;
 
 	@Parameters("browser")     
@@ -154,8 +154,6 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest{
 		Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
 		
 		myAccountPage = homePage.clickToMyAccountLink();
-		myAccountPage.clickToNewsletterCheckbox();
-		
 		
 	}
 
