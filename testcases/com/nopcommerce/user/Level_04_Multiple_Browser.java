@@ -3,8 +3,8 @@ package com.nopcommerce.user;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageObjects.nopCommerce.HomePageObject;
-import pageObjects.nopCommerce.RegisterPageObject;
+import pageObjects.nopCommerce.user.UserHomePageObject;
+import pageObjects.nopCommerce.user.UserRegisterPageObject;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -22,8 +22,8 @@ import org.testng.annotations.AfterClass;
 public class Level_04_Multiple_Browser extends BaseTest{
 	
 	private WebDriver driverTestClass;
-	private HomePageObject homePage;
-	private RegisterPageObject registerPage;
+	private UserHomePageObject homePage;
+	private UserRegisterPageObject registerPage;
 	private String firstName, lastName, emailAddress, password;
 
 	@Parameters("browser")
@@ -33,7 +33,7 @@ public class Level_04_Multiple_Browser extends BaseTest{
 		driverTestClass = getBrowserDriver(browserName);
 		System.out.println("Driver at Class test = " + driverTestClass.toString());
 
-		homePage = new HomePageObject(driverTestClass);
+		homePage = new UserHomePageObject(driverTestClass);
 		
 		firstName = "Automation";
 		lastName = "FC";

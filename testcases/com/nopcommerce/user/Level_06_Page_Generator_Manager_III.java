@@ -6,11 +6,11 @@ import com.beust.jcommander.Parameter;
 
 import commons.BasePage;
 import commons.BaseTest;
-import pageObjects.nopCommerce.CustomerInfoPageObject;
-import pageObjects.nopCommerce.HomePageObject;
-import pageObjects.nopCommerce.LoginPageObject;
-import pageObjects.nopCommerce.PageGeneratorManager;
-import pageObjects.nopCommerce.RegisterPageObject;
+import commons.PageGeneratorManager;
+import pageObjects.nopCommerce.user.UserCustomerInforPageObject;
+import pageObjects.nopCommerce.user.UserHomePageObject;
+import pageObjects.nopCommerce.user.UserLoginPageObject;
+import pageObjects.nopCommerce.user.UserRegisterPageObject;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -27,10 +27,10 @@ import org.testng.annotations.AfterClass;
 public class Level_06_Page_Generator_Manager_III extends BaseTest{
  
 	private WebDriver driver;
-	private HomePageObject homePage;
-	private RegisterPageObject registerPage;
-	private LoginPageObject loginPage;
-	private CustomerInfoPageObject myAccountPage;
+	private UserHomePageObject homePage;
+	private UserRegisterPageObject registerPage;
+	private UserLoginPageObject loginPage;
+	private UserCustomerInforPageObject myAccountPage;
 	private String firstName, lastName, invalidEmail, notFoundEmail, existingEmail, validPassword, invalidPassword;
 
 	@Parameters("browser")     
@@ -38,7 +38,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest{
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
 		
-		homePage = PageGeneratorManager.getHomePage(driver);
+		homePage = PageGeneratorManager.getUserHomePage(driver);
 		
 		firstName = "Automation";
 		lastName = "FC";
@@ -72,7 +72,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest{
 	@Test
 	public void Login_01_Empty_Data() {
 		System.out.println("Login_01_Empty_Data - Step 1: Click to Login link");
-		loginPage = homePage.clickToLoginLink();
+		loginPage = homePage.openLoginPage();
 		
 		System.out.println("Login_01_Empty_Data - Step 2: Click to Login button");
 		loginPage.clickToLoginButton();
@@ -84,7 +84,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest{
 	@Test
 	public void Login_02_Invalid_Email() {
 		System.out.println("Login_02_Invalid_Email - Step 1: Click to Login link");
-		loginPage = homePage.clickToLoginLink();
+		loginPage = homePage.openLoginPage();
 		
 		loginPage.inputToEmailTextbox(invalidEmail);
 		
@@ -98,7 +98,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest{
 	@Test
 	public void Login_03_Email_Not_Found() {
 		System.out.println("Login_03_Email_Not_Found - Step 1: Click to Login link");
-		loginPage = homePage.clickToLoginLink();
+		loginPage = homePage.openLoginPage();
 		
 		loginPage.inputToEmailTextbox(notFoundEmail);
 		
@@ -112,7 +112,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest{
 	@Test
 	public void Login_04_Existing_Email_Empty_Password() {
 		System.out.println("Login_04_Existing_Email_Empty_Password - Step 1: Click to Login link");
-		loginPage = homePage.clickToLoginLink();
+		loginPage = homePage.openLoginPage();
 		
 		loginPage.inputToEmailTextbox(existingEmail);
 		loginPage.inputToPasswordTextbox("");
@@ -128,7 +128,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest{
 	@Test
 	public void Login_05_Existing_Email_Incorrect_Password() {
 		System.out.println("Login_05_Existing_Email_Incorrect_Password - Step 1: Click to Login link");
-		loginPage = homePage.clickToLoginLink();
+		loginPage = homePage.openLoginPage();
 		
 		loginPage.inputToEmailTextbox(existingEmail);
 		loginPage.inputToPasswordTextbox("xamxide");
@@ -144,7 +144,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest{
 	@Test
 	public void Login_06_Valid_Email_Password() {
 		System.out.println("Login_06_Valid_Email_Password - Step 1: Click to Login link");
-		loginPage = homePage.clickToLoginLink();
+		loginPage = homePage.openLoginPage();
 		
 		loginPage.inputToEmailTextbox(existingEmail);
 		loginPage.inputToPasswordTextbox(validPassword);

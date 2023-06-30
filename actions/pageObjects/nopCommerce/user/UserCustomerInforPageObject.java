@@ -1,22 +1,22 @@
-package pageObjects.nopCommerce;
+package pageObjects.nopCommerce.user;
 
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
-import pageUIs.nopCommerce.CustomerInforPageUI;
-import pageUIs.nopCommerce.HomePageUI;
+import pageUIs.nopCommerce.user.UserCustomerInforPageUI;
+import pageUIs.nopCommerce.user.UserHomePageUI;
 
-public class CustomerInfoPageObject extends BasePage {
+public class UserCustomerInforPageObject extends BasePage {
 	
 	private WebDriver driver; 
 	
-	public CustomerInfoPageObject(WebDriver driver) {
+	public UserCustomerInforPageObject(WebDriver driver) {
 		this.driver = driver;
 	}
 
 	public boolean isCustomerInfoPageDisplayed() {
-		waitForAllElementVisible(driver, CustomerInforPageUI.CUSTOMER_INFOR_HEADER);
-		return isElementDisplayed(driver, CustomerInforPageUI.CUSTOMER_INFOR_HEADER);
+		waitForAllElementVisible(driver, UserCustomerInforPageUI.CUSTOMER_INFOR_HEADER);
+		return isElementDisplayed(driver, UserCustomerInforPageUI.CUSTOMER_INFOR_HEADER);
 	}
 
 //	public AddressPageObject openAddressPage() {
