@@ -29,7 +29,6 @@ import org.testng.annotations.AfterClass;
 
 public class Level_09_Dynamic_Locator extends BaseTest{
  
-	private WebDriver driver;
 	private UserHomePageObject homePage;
 	private UserRegisterPageObject registerPage;
 	private UserLoginPageObject loginPage;
