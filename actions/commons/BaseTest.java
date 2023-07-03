@@ -72,36 +72,36 @@ public class BaseTest {
 	}
 	
 	protected WebDriver getBrowserDriver2(String browserName) {
-		// BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
+		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 
-		if (browserName == "FIREFOX") {
+		if (browserList == BrowserList.FIREFOX) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
-		} else if (browserName == "H_FIREFOX") {
+		} else if (browserList == BrowserList.H_FIREFOX) {
 			WebDriverManager.firefoxdriver().setup();
 			FirefoxOptions options = new FirefoxOptions();
 			options.addArguments("--headless");
 			options.addArguments("window-size=1920x1080");
 			driver = new FirefoxDriver(options);
-		} else if (browserName == "CHROME") {
+		} else if (browserList == BrowserList.CHROME) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
-		} else if (browserName == "H_CHROME") {
+		} else if (browserList == BrowserList.H_CHROME) {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--headless");
 			options.addArguments("window-size=1920x1080");
 			driver = new ChromeDriver(options);
-		} else if (browserName == "EDGE") {
+		} else if (browserList == BrowserList.EDGE) {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
-		} else if (browserName == "IE") {
+		} else if (browserList == BrowserList.IE) {
 			WebDriverManager.iedriver().arch32().setup();
 			driver = new InternetExplorerDriver();
-		} else if (browserName == "OPERA") {
+		} else if (browserList == BrowserList.OPERA) {
 			WebDriverManager.operadriver().setup();
 			driver = new OperaDriver();
-		} else if (browserName == "COCCOC") {
+		} else if (browserList == BrowserList.COCCOC) {
 			// Cốc Cốc brwoser trừ đi 5-6 version ra chromedriver
 			WebDriverManager.chromedriver().driverVersion("93.0.4577.63").setup();
 			ChromeOptions options = new ChromeOptions();
@@ -112,7 +112,7 @@ public class BaseTest {
 			}
 			driver = new ChromeDriver(options);
 
-		} else if (browserName == "BRAVE") {
+		} else if (browserList == BrowserList.BRAVE) {
 			// Brave browser version nào dùng chromedriver version đó
 			WebDriverManager.chromedriver().driverVersion("95.0.4638.17").setup();
 			ChromeOptions options = new ChromeOptions();
