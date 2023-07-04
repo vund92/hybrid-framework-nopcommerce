@@ -49,7 +49,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest{
 		invalidPassword = "xamxide";
 		
 		System.out.println("Pre-Condition - Step 01: Click to Register link");
-		registerPage = homePage.clickToRegisterLink();
+		registerPage = homePage.openRegisterPage();
 		
 		System.out.println("Pre-Condition - Step 02: Input to required fields");
 		registerPage.inputToFirstnameTextbox(firstName);
@@ -153,7 +153,7 @@ public class Level_06_Page_Generator_Manager_III extends BaseTest{
 		homePage = loginPage.clickToLoginButton();
 		Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
 		
-		myAccountPage = homePage.clickToMyAccountLink();
+		myAccountPage = homePage.openMyAccountPage();
 		
 	}
 

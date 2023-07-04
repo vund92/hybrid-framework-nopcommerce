@@ -47,7 +47,7 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest{
 		invalidPassword = "xamxide";
 		
 		System.out.println("Pre-Condition - Step 01: Click to Register link");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 		
 		//CLick Register link -> nhảy qua trang Register
 		//2

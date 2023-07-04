@@ -44,7 +44,7 @@ public class Level_12_Assert_Verify extends BaseTest{
   
 	@Test
 	public void User_01_Register_Login() {
-		registerPage = homePage.clickToRegisterLink();
+		registerPage = homePage.openRegisterPage();
 		registerPage.inputToFirstnameTextbox(firstName);
 		registerPage.inputToLastnameTextbox(lastName);
 		registerPage.inputToEmailTextbox(emailAddress);
@@ -64,7 +64,7 @@ public class Level_12_Assert_Verify extends BaseTest{
 		homePage = loginPage.clickToLoginButton();
 		verifyFalse(homePage.isMyAccountLinkDisplayed());
 		
-		customerInforPage = homePage.clickToMyAccountLink();
+		customerInforPage = homePage.openMyAccountPage();
 		verifyFalse(customerInforPage.isCustomerInfoPageDisplayed());
 		
 	}

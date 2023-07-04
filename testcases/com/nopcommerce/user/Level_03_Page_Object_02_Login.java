@@ -48,7 +48,7 @@ public class Level_03_Page_Object_02_Login {
 		registerPage = new UserRegisterPageObject(driver);
 		
 		System.out.println("Pre-Condition - Step 01: Click to Register link");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 		
 		//CLick Register link -> nhảy qua trang Register
 		registerPage = new UserRegisterPageObject(driver);

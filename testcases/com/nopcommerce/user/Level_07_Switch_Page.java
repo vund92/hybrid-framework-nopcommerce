@@ -54,7 +54,7 @@ public class Level_07_Switch_Page extends BaseTest{
   
 	@Test
 	public void User_01_Register() {
-		registerPage = homePage.clickToRegisterLink();
+		registerPage = homePage.openRegisterPage();
 		registerPage.inputToFirstnameTextbox(firstName);
 		registerPage.inputToLastnameTextbox(lastName);
 		registerPage.inputToEmailTextbox(emailAddress);
@@ -79,7 +79,7 @@ public class Level_07_Switch_Page extends BaseTest{
 	
 	@Test
 	public void User_03_Customer_Infor() {
-		customerInforPage = homePage.clickToMyAccountLink();
+		customerInforPage = homePage.openMyAccountPage();
 		Assert.assertTrue(customerInforPage.isCustomerInfoPageDisplayed());
 		
 	}

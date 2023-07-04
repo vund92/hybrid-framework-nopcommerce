@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
 import commons.PageGeneratorManager;
+import pageUIs.nopCommerce.user.UserHomePageUI;
 import pageUIs.nopCommerce.user.UserRegisterPageUI;
 
 public class UserRegisterPageObject extends BasePage {
@@ -88,6 +89,11 @@ public class UserRegisterPageObject extends BasePage {
 	public String getErrorExistingEmailMessage() {
 		waitForElementVisible(driver, UserRegisterPageUI.EXISTING_EMAIL_ERROR_MESSAGE);
 		return getElementText(driver, UserRegisterPageUI.EXISTING_EMAIL_ERROR_MESSAGE);
+	}
+	
+	public boolean isLogoutLinkDisplayed() {
+		waitForElementVisible(driver, UserRegisterPageUI.LOGOUT_LINK);
+		return isElementDisplayed(driver, UserRegisterPageUI.LOGOUT_LINK);
 	}
 
 }
