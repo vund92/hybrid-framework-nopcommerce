@@ -16,7 +16,6 @@
 	<classpathentry kind="lib" path="libLog4J/log4j-1.2.16.jar"/>
 	<classpathentry kind="lib" path="librariesSeleniumTestNG/client-combined-3.141.59-sources.jar"/>
 	<classpathentry kind="lib" path="librariesSeleniumTestNG/selenium-server-standalone-3.141.59.jar"/>
-	<classpathentry kind="lib" path="librariesSeleniumTestNG/testng-6.14.3.jar"/>
 	<classpathentry kind="lib" path="libWebDriverManager/bcpkix-jdk15on-1.64.jar"/>
 	<classpathentry kind="lib" path="libWebDriverManager/bcprov-jdk15on-1.64.jar"/>
 	<classpathentry kind="lib" path="libWebDriverManager/commons-compress-1.21.jar"/>
@@ -43,5 +42,13 @@
 	<classpathentry kind="lib" path="libReportNG/guice-3.0.jar"/>
 	<classpathentry kind="lib" path="libReportNG/reportng-1.1.4.jar"/>
 	<classpathentry kind="lib" path="libReportNG/velocity-1.4.jar"/>
+	<classpathentry kind="lib" path="libExtentReportListeninerV2/bson-3.0.4.jar"/>
+	<classpathentry kind="lib" path="libExtentReportListeninerV2/extentreports-2.41.2.jar"/>
+	<classpathentry kind="lib" path="libExtentReportListeninerV2/freemarker-2.3.23.jar"/>
+	<classpathentry kind="lib" path="libExtentReportListeninerV2/jsoup-1.8.3.jar"/>
+	<classpathentry kind="lib" path="libExtentReportListeninerV2/mongodb-driver-3.0.4.jar"/>
+	<classpathentry kind="lib" path="libExtentReportListeninerV2/mongodb-driver-core-3.0.4.jar"/>
+	<classpathentry kind="lib" path="libExtentReportListeninerV2/sqlite-jdbc-3.8.11.1.jar"/>
+	<classpathentry kind="lib" path="librariesSeleniumTestNG/testng-6.14.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

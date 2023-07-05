@@ -182,6 +182,10 @@ public class BaseTest {
 		driver.get(appUrl);
 		return driver;
 	}
+
+	public WebDriver getDriverInstance() {
+		return this.driver;
+	}
 	
 	/*
 	 * protected String getEnvironmentUrl(String serverName) { String envUrl = null;

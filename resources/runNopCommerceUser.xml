@@ -50,14 +50,24 @@
 		<!--show all failed number/error message to Console/ Log/ Report/ TestNG Result -->
 		<listener class-name="commons.MethodListener" /> 
 		
+		<!-- Nếu cho may chay qua dem de hom sau check lai thì dung ham verify và ko dùng attact screenshot vào report, nên dòng bên dưới sẽ comment lại -->
+		<listener class-name="reportConfig.ReportNGListener" />
+		
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+
+		<!-- Khong co screenshot cho failed testcase -->
+		<listener class-name="reportConfig.ExtentReportListenerV2" />
+		
+		<!-- Co screenshot cho failed testcase -->
+		<listener class-name="reportConfig.ExtentTestListener" />
+
 	</listeners>
 
 	<test name="Run on Opera">
 		<parameter name="browser" value="opera" />
 		<classes>
-			<class name="com.nopcommerce.user.Level_14_Log_ReportNG" />
+			<class name="com.nopcommerce.user.Level_15_ExtentV2_Screenshot" />
 		</classes>
 	</test>
   
