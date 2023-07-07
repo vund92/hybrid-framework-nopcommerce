@@ -2,7 +2,7 @@ package com.nopcommerce.user;
 
 import org.testng.annotations.Test;
 
-import com.relevantcodes.extentreports.LogStatus;
+//import com.relevantcodes.extentreports.LogStatus;
 
 import commons.BaseTest;
 import commons.PageGeneratorManager;
@@ -13,7 +13,7 @@ import pageObjects.nopCommerce.user.UserLoginPageObject;
 import pageObjects.nopCommerce.user.UserMyProductReviewPageObject;
 import pageObjects.nopCommerce.user.UserRegisterPageObject;
 import pageObjects.nopCommerce.user.UserRewardPointPageObject;
-import reportConfig.ExtentManager;
+//import reportConfig.ExtentManagerV2;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
@@ -31,110 +31,110 @@ import org.testng.annotations.AfterClass;
 // con muon no app dung cho tat ca cac class thi de no trong file runNopCommerce.xml
 public class Level_15_ExtentV2_Screenshot extends BaseTest{
  
-	private UserHomePageObject homePage;
-	private UserRegisterPageObject registerPage;
-	private UserLoginPageObject loginPage;
-	private UserCustomerInforPageObject customerInforPage; 
-	private UserAddressPageObject addressPage;
-	private UserMyProductReviewPageObject myProductReviewPage;
-	private UserRewardPointPageObject rewardPointPage;
-	String firstName, lastName, emailAddress, validPassword;
+//	private UserHomePageObject homePage;
+//	private UserRegisterPageObject registerPage;
+//	private UserLoginPageObject loginPage;
+//	private UserCustomerInforPageObject customerInforPage; 
+//	private UserAddressPageObject addressPage;
+//	private UserMyProductReviewPageObject myProductReviewPage;
+//	private UserRewardPointPageObject rewardPointPage;
+//	String firstName, lastName, emailAddress, validPassword;
 
 	@Parameters("browser")     
 	@BeforeClass
 	public void beforeClass(String browserName) {
-		driver = getBrowserDriver(browserName);
-		homePage = PageGeneratorManager.getUserHomePage(driver);
-		
-		firstName = "Automation";
-		lastName = "FC";
-		emailAddress = "afc" + generateFakeNumber() + "@mail.vn";
-		validPassword = "123456";
+//		driver = getBrowserDriver(browserName);
+//		homePage = PageGeneratorManager.getUserHomePage(driver);
+//		
+//		firstName = "Automation";
+//		lastName = "FC";
+//		emailAddress = "afc" + generateFakeNumber() + "@mail.vn";
+//		validPassword = "123456";
 
 	}
   
 	@Test
 	public void User_01_Register(Method method) {
-		ExtentManager.startTest(method.getName(), "User_01_Register");
-		
-		//log.info("Register - Step 01: Navigate to 'Register' page"); 
-		ExtentManager.getTest().log(LogStatus.INFO, "Register - Step 01: Navigate to 'Register' page");
-		registerPage = homePage.openRegisterPage();
-	
-		//log.info("Register - Step 02: Enter to Firstname textbox with value is '" + firstName + "'"); 
-		ExtentManager.getTest().log(LogStatus.INFO, "Register - Step 02: Enter to Firstname textbox with value is '" + firstName + "'");
-		registerPage.inputToFirstnameTextbox(firstName);
-		
-		//log.info("Register - Step 03: Enter to Lastname textbox with value is '" + lastName + "'"); 
-		ExtentManager.getTest().log(LogStatus.INFO, "Register - Step 03: Enter to Lastname textbox with value is '" + lastName + "'");
-		registerPage.inputToLastnameTextbox(lastName);
-		
-		//log.info("Register - Step 04: Enter to Email textbox with value is '" + emailAddress + "'");
-		ExtentManager.getTest().log(LogStatus.INFO, "Register - Step 04: Enter to Email textbox with value is '" + emailAddress + "'");
-		registerPage.inputToEmailTextbox(emailAddress);
-		
-		//log.info("Register - Step 05: Enter to Password textbox with value is '" + validPassword + "'"); 
-		ExtentManager.getTest().log(LogStatus.INFO, "Register - Step 05: Enter to Password textbox with value is '" + validPassword + "'");
-		registerPage.inputToPasswordTextbox(validPassword);
-		
-		//log.info("Register - Step 06: Enter to Confirm Password textbox with value is '" + validPassword + "'");
-		ExtentManager.getTest().log(LogStatus.INFO, "Register - Step 06: Enter to Confirm Password textbox with value is '" + validPassword + "'");
-		registerPage.inputToConfirmPasswordTextbox(validPassword);
-		
-		//log.info("Register - Step 07: Click to 'Register' button"); 
-		ExtentManager.getTest().log(LogStatus.INFO, "Register - Step 07: Click to 'Register' button");
-		registerPage.clickToRegisterButton();
-		
-		//log.info("Register - Step 08: Verify register success message is displayed"); 
-		ExtentManager.getTest().log(LogStatus.INFO, "Register - Step 08: Verify register success message is displayed");
-		verifyEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
-		
-		ExtentManager.endTest();
+//		ExtentManagerV2.startTest(method.getName(), "User_01_Register");
+//		
+//		//log.info("Register - Step 01: Navigate to 'Register' page"); 
+//		ExtentManagerV2.getTest().log(LogStatus.INFO, "Register - Step 01: Navigate to 'Register' page");
+//		registerPage = homePage.openRegisterPage();
+//	
+//		//log.info("Register - Step 02: Enter to Firstname textbox with value is '" + firstName + "'"); 
+//		ExtentManagerV2.getTest().log(LogStatus.INFO, "Register - Step 02: Enter to Firstname textbox with value is '" + firstName + "'");
+//		registerPage.inputToFirstnameTextbox(firstName);
+//		
+//		//log.info("Register - Step 03: Enter to Lastname textbox with value is '" + lastName + "'"); 
+//		ExtentManagerV2.getTest().log(LogStatus.INFO, "Register - Step 03: Enter to Lastname textbox with value is '" + lastName + "'");
+//		registerPage.inputToLastnameTextbox(lastName);
+//		
+//		//log.info("Register - Step 04: Enter to Email textbox with value is '" + emailAddress + "'");
+//		ExtentManagerV2.getTest().log(LogStatus.INFO, "Register - Step 04: Enter to Email textbox with value is '" + emailAddress + "'");
+//		registerPage.inputToEmailTextbox(emailAddress);
+//		
+//		//log.info("Register - Step 05: Enter to Password textbox with value is '" + validPassword + "'"); 
+//		ExtentManagerV2.getTest().log(LogStatus.INFO, "Register - Step 05: Enter to Password textbox with value is '" + validPassword + "'");
+//		registerPage.inputToPasswordTextbox(validPassword);
+//		
+//		//log.info("Register - Step 06: Enter to Confirm Password textbox with value is '" + validPassword + "'");
+//		ExtentManagerV2.getTest().log(LogStatus.INFO, "Register - Step 06: Enter to Confirm Password textbox with value is '" + validPassword + "'");
+//		registerPage.inputToConfirmPasswordTextbox(validPassword);
+//		
+//		//log.info("Register - Step 07: Click to 'Register' button"); 
+//		ExtentManagerV2.getTest().log(LogStatus.INFO, "Register - Step 07: Click to 'Register' button");
+//		registerPage.clickToRegisterButton();
+//		
+//		//log.info("Register - Step 08: Verify register success message is displayed"); 
+//		ExtentManagerV2.getTest().log(LogStatus.INFO, "Register - Step 08: Verify register success message is displayed");
+//		verifyEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
+//		
+//		ExtentManagerV2.endTest();
 	}
 	
 	@Test
 	public void User_02_Login(Method method) {
-		ExtentManager.startTest(method.getName(), "User_02_Login");
-		
-		if(homePage.isLoginLinkUndisplayed() ) {
-			//log.info("Login - Step 00: Click to Logout Link"); 
-			ExtentManager.getTest().log(LogStatus.INFO, "Login - Step 00: Click to Logout Link");
-			homePage = registerPage.clickToLogoutLink();
-			
-			//log.info("Login - Step 01: Navigate to Login page"); 
-			ExtentManager.getTest().log(LogStatus.INFO, "Login - Step 01: Navigate to Login page");
-			loginPage = homePage.openLoginPage();
-		} else {
-			//log.info("Login - Step 01: Navigate to Login page"); 
-			ExtentManager.getTest().log(LogStatus.INFO, "Login - Step 01: Navigate to Login page");
-			loginPage = homePage.openLoginPage();
-		}
-		
-		//log.info("Login - Step 02: Enter to Email textbox with value is '" + emailAddress + "'"); 
-		ExtentManager.getTest().log(LogStatus.INFO, "Login - Step 02: Enter to Email textbox with value is '" + emailAddress + "'");
-		loginPage.inputToEmailTextbox(emailAddress);
-		
-		//log.info("Login - Step 03: Enter to Password textbox with value is '" + validPassword + "'");
-		ExtentManager.getTest().log(LogStatus.INFO, "Login - Step 03: Enter to Password textbox with value is '" + validPassword + "'");
-		loginPage.inputToPasswordTextbox(validPassword);
-		
-		//log.info("Login - Step 04: Click to Login button"); 
-		ExtentManager.getTest().log(LogStatus.INFO, "Login - Step 04: Click to Login button");
-		homePage = loginPage.clickToLoginButton();
-		
-		//log.info("Login - Step 05: Verify 'My Account' link is displayed"); 
-		ExtentManager.getTest().log(LogStatus.INFO, "Login - Step 05: Verify 'My Account' link is displayed");
-		assertFalse(homePage.isMyAccountLinkDisplayed());
-		
-		//log.info("Login - Step 06: Navigate to 'My Account' page");
-		ExtentManager.getTest().log(LogStatus.INFO, "Login - Step 06: Navigate to 'My Account' page");
-		customerInforPage = homePage.openMyAccountPage();
-		
-		//log.info("Login - Step 07: Verify 'Customer Infor' page is displayed"); 
-		ExtentManager.getTest().log(LogStatus.INFO, "Login - Step 07: Verify 'Customer Infor' page is displayed");
-		assertFalse(customerInforPage.isCustomerInfoPageDisplayed());
-		
-		ExtentManager.endTest();
+//		ExtentManagerV2.startTest(method.getName(), "User_02_Login");
+//		
+//		if(homePage.isLoginLinkUndisplayed() ) {
+//			//log.info("Login - Step 00: Click to Logout Link"); 
+//			ExtentManagerV2.getTest().log(LogStatus.INFO, "Login - Step 00: Click to Logout Link");
+//			homePage = registerPage.clickToLogoutLink();
+//			
+//			//log.info("Login - Step 01: Navigate to Login page"); 
+//			ExtentManagerV2.getTest().log(LogStatus.INFO, "Login - Step 01: Navigate to Login page");
+//			loginPage = homePage.openLoginPage();
+//		} else {
+//			//log.info("Login - Step 01: Navigate to Login page"); 
+//			ExtentManagerV2.getTest().log(LogStatus.INFO, "Login - Step 01: Navigate to Login page");
+//			loginPage = homePage.openLoginPage();
+//		}
+//		
+//		//log.info("Login - Step 02: Enter to Email textbox with value is '" + emailAddress + "'"); 
+//		ExtentManagerV2.getTest().log(LogStatus.INFO, "Login - Step 02: Enter to Email textbox with value is '" + emailAddress + "'");
+//		loginPage.inputToEmailTextbox(emailAddress);
+//		
+//		//log.info("Login - Step 03: Enter to Password textbox with value is '" + validPassword + "'");
+//		ExtentManagerV2.getTest().log(LogStatus.INFO, "Login - Step 03: Enter to Password textbox with value is '" + validPassword + "'");
+//		loginPage.inputToPasswordTextbox(validPassword);
+//		
+//		//log.info("Login - Step 04: Click to Login button"); 
+//		ExtentManagerV2.getTest().log(LogStatus.INFO, "Login - Step 04: Click to Login button");
+//		homePage = loginPage.clickToLoginButton();
+//		
+//		//log.info("Login - Step 05: Verify 'My Account' link is displayed"); 
+//		ExtentManagerV2.getTest().log(LogStatus.INFO, "Login - Step 05: Verify 'My Account' link is displayed");
+//		assertFalse(homePage.isMyAccountLinkDisplayed());
+//		
+//		//log.info("Login - Step 06: Navigate to 'My Account' page");
+//		ExtentManagerV2.getTest().log(LogStatus.INFO, "Login - Step 06: Navigate to 'My Account' page");
+//		customerInforPage = homePage.openMyAccountPage();
+//		
+//		//log.info("Login - Step 07: Verify 'Customer Infor' page is displayed"); 
+//		ExtentManagerV2.getTest().log(LogStatus.INFO, "Login - Step 07: Verify 'Customer Infor' page is displayed");
+//		assertFalse(customerInforPage.isCustomerInfoPageDisplayed());
+//		
+//		ExtentManagerV2.endTest();
 	}
 
   @AfterClass
