@@ -16,7 +16,7 @@ public class UserCustomerInforPageObject extends BasePage {
 	}
 
 	@Step("Login - Check 'Customer Infor' page is displayed")
-	public boolean isCustomerInfoPageDisplayed() {
+	public boolean isCustomerInforPageDisplayed() {
 		waitForAllElementVisible(driver, UserCustomerInforPageUI.CUSTOMER_INFOR_HEADER);
 		return isElementDisplayed(driver, UserCustomerInforPageUI.CUSTOMER_INFOR_HEADER);
 	}

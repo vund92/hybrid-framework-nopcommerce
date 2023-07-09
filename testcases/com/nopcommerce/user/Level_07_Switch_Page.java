@@ -80,7 +80,7 @@ public class Level_07_Switch_Page extends BaseTest{
 	@Test
 	public void User_03_Customer_Infor() {
 		customerInforPage = homePage.openMyAccountPage();
-		Assert.assertTrue(customerInforPage.isCustomerInfoPageDisplayed());
+		Assert.assertTrue(customerInforPage.isCustomerInforPageDisplayed());
 		
 	}
 	

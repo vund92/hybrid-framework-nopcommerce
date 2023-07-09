@@ -104,5 +104,5 @@ public class UserRegisterPageObject extends BasePage {
 		waitForElementVisible(driver, UserRegisterPageUI.LOGOUT_LINK);
 		return isElementDisplayed(driver, UserRegisterPageUI.LOGOUT_LINK);
 	}
-
+	
 }

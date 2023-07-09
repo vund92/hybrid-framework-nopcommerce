@@ -106,7 +106,7 @@ public class Level_15_ReportNG_Screenshot extends BaseTest{
 		customerInforPage = homePage.openMyAccountPage();
 		
 		log.info("Login - Step 07: Verify 'Customer Infor' page is displayed"); 
-		assertFalse(customerInforPage.isCustomerInfoPageDisplayed());
+		assertFalse(customerInforPage.isCustomerInforPageDisplayed());
 		
 	}
 

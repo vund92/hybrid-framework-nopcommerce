@@ -71,7 +71,7 @@ public class Level_09_Dynamic_Locator extends BaseTest{
 		Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
 		
 		customerInforPage = homePage.openMyAccountPage();
-		Assert.assertTrue(customerInforPage.isCustomerInfoPageDisplayed());
+		Assert.assertTrue(customerInforPage.isCustomerInforPageDisplayed());
 		
 	}
 	

@@ -79,7 +79,7 @@ public class Level_15_ExtentV3_Screenshot extends BaseTest{
 		
 		customerInforPage = homePage.openMyAccountPage();
 		
-		assertFalse(customerInforPage.isCustomerInfoPageDisplayed());
+		assertFalse(customerInforPage.isCustomerInforPageDisplayed());
 		
 	}
 

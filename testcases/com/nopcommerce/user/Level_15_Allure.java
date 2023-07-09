@@ -140,7 +140,7 @@ public class Level_15_Allure extends BaseTest{
 		
 		//log.info("Login - Step 07: Verify 'Customer Infor' page is displayed"); 
 		//ExtentTestManagerV5.getTest().log(Status.INFO, "Login - Step 07: Verify 'Customer Infor' page is displayed");
-		assertFalse(customerInforPage.isCustomerInfoPageDisplayed());
+		assertFalse(customerInforPage.isCustomerInforPageDisplayed());
 		
 	}
 
