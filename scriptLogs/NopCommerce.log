@@ -675,3 +675,144 @@
 [INFO ] [2023-07-07 10:21:33,105]  -------------------------- PASSED -------------------------- 
 [INFO ] [2023-07-07 10:25:50,502]  -------------------------- PASSED -------------------------- 
 [INFO ] [2023-07-07 10:53:24,350]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-07-07 17:17:54,716]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-07-07 17:21:11,654]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-07-07 17:27:10,320] Register - Step 01: Navigate to 'Register' page
+[INFO ] [2023-07-07 17:27:11,341] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2023-07-07 17:27:11,489] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[INFO ] [2023-07-07 17:27:11,599] Register - Step 04: Enter to Email textbox with value is 'afc2544@mail.vn'
+[INFO ] [2023-07-07 17:27:11,721] Register - Step 05: Enter to Password textbox with value is '123456'
+[INFO ] [2023-07-07 17:27:11,844] Register - Step 06: Enter to Confirm Password textbox with value is '123456'
+[INFO ] [2023-07-07 17:27:11,952] Register - Step 07: Click to 'Register' button
+[INFO ] [2023-07-07 17:27:12,775] Register - Step 08: Verify register success message is displayed
+[INFO ] [2023-07-07 17:27:12,821]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-07-07 17:27:12,923] Login - Step 01: Navigate to Login page
+[INFO ] [2023-07-07 17:27:13,330] Login - Step 02: Enter to Email textbox with value is 'afc2544@mail.vn'
+[INFO ] [2023-07-07 17:27:13,456] Login - Step 03: Enter to Password textbox with value is '123456'
+[INFO ] [2023-07-07 17:27:13,559] Login - Step 04: Click to Login button
+[INFO ] [2023-07-07 17:27:14,250] Login - Step 05: Verify 'My Account' link is displayed
+[INFO ] [2023-07-08 04:27:02,178]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-07-08 04:27:21,750]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-07-08 04:34:35,506]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-07-08 04:59:41,201]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-07-08 05:06:11,582]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-07-08 05:09:18,028]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-07-08 05:28:22,278]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-07-08 05:29:46,122]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-07-08 05:31:14,161]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-07-08 05:34:41,610]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-07-08 05:39:32,394]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-07-08 05:59:58,370]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-07-09 03:40:52,758] Login - Step 01: Navigate to Login page
+[INFO ] [2023-07-09 03:40:53,712] Login - Step 02: Enter to Email textbox with value is 'afc2137@mail.vn'
+[INFO ] [2023-07-09 03:40:53,848] Login - Step 03: Enter to Password textbox with value is '123456'
+[INFO ] [2023-07-09 03:40:53,975] Login - Step 04: Click to Login button
+[INFO ] [2023-07-09 04:09:15,123] Login - Step 01: Navigate to Login page
+[INFO ] [2023-07-09 04:09:16,119] Login - Step 02: Enter to Email textbox with value is 'afc6336@mail.vn'
+[INFO ] [2023-07-09 04:09:16,256] Login - Step 03: Enter to Password textbox with value is '123456'
+[INFO ] [2023-07-09 04:09:16,372] Login - Step 04: Click to Login button
+[INFO ] [2023-07-09 05:27:53,694] Pre-condition - Step 01: Navigate to Login page
+[INFO ] [2023-07-09 05:27:54,129] Pre-condition - Step 2: Set cookie and reload page
+[INFO ] [2023-07-09 05:28:50,651] Pre-condition - Step 01: Navigate to Login page
+[INFO ] [2023-07-09 05:28:51,612] Pre-condition - Step 2: Set cookie and reload page
+[INFO ] [2023-07-09 05:28:55,018] Pre-condition - Step 05: Verify 'My Account' link is displayed
+[INFO ] [2023-07-09 05:28:55,065]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-07-09 05:29:58,215] Pre-condition - Step 01: Navigate to Login page
+[INFO ] [2023-07-09 05:29:59,207] Pre-condition - Step 2: Set cookie and reload page
+[INFO ] [2023-07-09 05:30:02,333] Pre-condition - Step 05: Verify 'My Account' link is displayed
+[INFO ] [2023-07-09 05:30:02,666]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-07-09 05:54:35,118] Pre-condition - Step 01: Navigate to Login page
+[INFO ] [2023-07-09 05:54:36,117] Pre-condition - Step 2: Set cookie and reload page
+[INFO ] [2023-07-09 05:54:39,235] Pre-condition - Step 05: Verify 'My Account' link is displayed
+[INFO ] [2023-07-09 05:54:39,581]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-07-09 05:55:09,167] Pre-condition - Step 01: Navigate to Login page
+[INFO ] [2023-07-09 05:55:10,232] Pre-condition - Step 2: Set cookie and reload page
+[INFO ] [2023-07-09 05:55:13,363] Pre-condition - Step 05: Verify 'My Account' link is displayed
+[INFO ] [2023-07-09 05:55:13,728]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-07-09 08:59:51,954] Register - Step 01: Navigate to 'Register' page
+[INFO ] [2023-07-09 08:59:52,929] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2023-07-09 08:59:53,066] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[INFO ] [2023-07-09 08:59:53,196] Register - Step 04: Enter to Email textbox with value is 'afc7208@mail.vn'
+[INFO ] [2023-07-09 08:59:53,340] Register - Step 05: Enter to Password textbox with value is '123456'
+[INFO ] [2023-07-09 08:59:53,459] Register - Step 06: Enter to Confirm Password textbox with value is '123456'
+[INFO ] [2023-07-09 08:59:53,586] Register - Step 07: Click to 'Register' button
+[INFO ] [2023-07-09 08:59:54,283] Register - Step 08: Verify register success message is displayed
+[INFO ] [2023-07-09 08:59:54,347]  -------------------------- FAILED -------------------------- 
+[INFO ] [2023-07-09 08:59:54,461] Login - Step 01: Navigate to Login page
+[INFO ] [2023-07-09 08:59:54,834] Login - Step 02: Enter to Email textbox with value is 'afc7208@mail.vn'
+[INFO ] [2023-07-09 08:59:54,952] Login - Step 03: Enter to Password textbox with value is '123456'
+[INFO ] [2023-07-09 08:59:55,063] Login - Step 04: Click to Login button
+[INFO ] [2023-07-09 08:59:55,741] Login - Step 05: Verify 'My Account' link is displayed
+[INFO ] [2023-07-09 08:59:55,800]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-07-09 08:59:55,800] Login - Step 06: Navigate to 'My Account' page
+[INFO ] [2023-07-09 08:59:56,177] Login - Step 07: Verify 'Customer Infor' page is displayed
+[INFO ] [2023-07-09 08:59:56,238]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-07-09 09:01:15,509] Register - Step 01: Navigate to 'Register' page
+[INFO ] [2023-07-09 09:01:16,451] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2023-07-09 09:01:16,588] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[INFO ] [2023-07-09 09:01:16,717] Register - Step 04: Enter to Email textbox with value is 'afc9350@mail.vn'
+[INFO ] [2023-07-09 09:01:16,858] Register - Step 05: Enter to Password textbox with value is '123456'
+[INFO ] [2023-07-09 09:01:16,977] Register - Step 06: Enter to Confirm Password textbox with value is '123456'
+[INFO ] [2023-07-09 09:01:17,100] Register - Step 07: Click to 'Register' button
+[INFO ] [2023-07-09 09:01:17,775] Register - Step 08: Verify register success message is displayed
+[INFO ] [2023-07-09 09:01:17,830]  -------------------------- FAILED -------------------------- 
+[INFO ] [2023-07-09 09:01:17,929] Login - Step 01: Navigate to Login page
+[INFO ] [2023-07-09 09:01:18,313] Login - Step 02: Enter to Email textbox with value is 'afc9350@mail.vn'
+[INFO ] [2023-07-09 09:01:18,454] Login - Step 03: Enter to Password textbox with value is '123456'
+[INFO ] [2023-07-09 09:01:18,564] Login - Step 04: Click to Login button
+[INFO ] [2023-07-09 09:01:19,194] Login - Step 05: Verify 'My Account' link is displayed
+[INFO ] [2023-07-09 09:01:19,242]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-07-09 09:01:19,242] Login - Step 06: Navigate to 'My Account' page
+[INFO ] [2023-07-09 09:01:19,642] Login - Step 07: Verify 'Customer Infor' page is displayed
+[INFO ] [2023-07-09 09:01:19,696]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-07-09 09:01:39,770]  -------------------------- FAILED -------------------------- 
+[INFO ] [2023-07-09 09:01:39,816] Register - Step 01: Navigate to 'Register' page
+[INFO ] [2023-07-09 09:01:40,764] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2023-07-09 09:01:40,908] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[INFO ] [2023-07-09 09:01:41,038] Register - Step 04: Enter to Email textbox with value is 'afc5002@mail.vn'
+[INFO ] [2023-07-09 09:01:41,159] Register - Step 05: Enter to Password textbox with value is '123456'
+[INFO ] [2023-07-09 09:01:41,280] Register - Step 06: Enter to Confirm Password textbox with value is '123456'
+[INFO ] [2023-07-09 09:01:41,407] Register - Step 07: Click to 'Register' button
+[INFO ] [2023-07-09 09:01:42,850] Register - Step 08: Verify register success message is displayed
+[INFO ] [2023-07-09 09:01:42,906]  -------------------------- FAILED -------------------------- 
+[INFO ] [2023-07-09 09:01:43,021] Login - Step 01: Navigate to Login page
+[INFO ] [2023-07-09 09:01:43,390] Login - Step 02: Enter to Email textbox with value is 'afc5002@mail.vn'
+[INFO ] [2023-07-09 09:01:43,518] Login - Step 03: Enter to Password textbox with value is '123456'
+[INFO ] [2023-07-09 09:01:43,626] Login - Step 04: Click to Login button
+[INFO ] [2023-07-09 09:01:44,257] Login - Step 05: Verify 'My Account' link is displayed
+[INFO ] [2023-07-09 09:01:44,302]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-07-09 09:01:44,303] Login - Step 06: Navigate to 'My Account' page
+[INFO ] [2023-07-09 09:01:44,676] Login - Step 07: Verify 'Customer Infor' page is displayed
+[INFO ] [2023-07-09 09:01:44,737]  -------------------------- PASSED -------------------------- 
+[INFO ] [2023-07-09 14:25:27,999] Register - Step 01: Navigate to 'Register' page
+[INFO ] [2023-07-09 14:25:28,940] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2023-07-09 14:25:29,078] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[INFO ] [2023-07-09 14:25:29,208] Register - Step 04: Enter to Email textbox with value is 'afc278@mail.vn'
+[INFO ] [2023-07-09 14:25:29,330] Register - Step 05: Enter to Password textbox with value is '123456'
+[INFO ] [2023-07-09 14:25:29,457] Register - Step 06: Enter to Confirm Password textbox with value is '123456'
+[INFO ] [2023-07-09 14:25:29,566] Register - Step 07: Click to 'Register' button
+[INFO ] [2023-07-09 14:25:30,272] Register - Step 08: Verify register success message is displayed
+[INFO ] [2023-07-09 14:36:23,805] Register - Step 01: Navigate to 'Register' page
+[INFO ] [2023-07-09 14:36:24,779] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2023-07-09 14:36:24,919] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[INFO ] [2023-07-09 14:36:25,043] Register - Step 04: Enter to Email textbox with value is 'afc7244@mail.vn'
+[INFO ] [2023-07-09 14:36:25,167] Register - Step 05: Enter to Password textbox with value is '123456'
+[INFO ] [2023-07-09 14:36:25,288] Register - Step 06: Enter to Confirm Password textbox with value is '123456'
+[INFO ] [2023-07-09 14:36:25,396] Register - Step 07: Click to 'Register' button
+[INFO ] [2023-07-09 14:36:26,074] Register - Step 08: Verify register success message is displayed
+[INFO ] [2023-07-09 14:36:41,211] Register - Step 01: Navigate to 'Register' page
+[INFO ] [2023-07-09 14:36:42,179] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2023-07-09 14:36:42,314] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[INFO ] [2023-07-09 14:36:42,445] Register - Step 04: Enter to Email textbox with value is 'afc5890@mail.vn'
+[INFO ] [2023-07-09 14:36:42,588] Register - Step 05: Enter to Password textbox with value is '123456'
+[INFO ] [2023-07-09 14:36:42,707] Register - Step 06: Enter to Confirm Password textbox with value is '123456'
+[INFO ] [2023-07-09 14:36:42,816] Register - Step 07: Click to 'Register' button
+[INFO ] [2023-07-09 14:36:43,516] Register - Step 08: Verify register success message is displayed
+[INFO ] [2023-07-09 15:04:08,818] Register - Step 01: Navigate to 'Register' page
+[INFO ] [2023-07-09 15:04:09,886] Register - Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2023-07-09 15:04:10,017] Register - Step 03: Enter to Lastname textbox with value is 'FC'
+[INFO ] [2023-07-09 15:04:10,144] Register - Step 04: Enter to Email textbox with value is 'afc5839@mail.vn'
+[INFO ] [2023-07-09 15:04:10,269] Register - Step 05: Enter to Password textbox with value is '123456'
+[INFO ] [2023-07-09 15:04:10,393] Register - Step 06: Enter to Confirm Password textbox with value is '123456'
+[INFO ] [2023-07-09 15:04:10,501] Register - Step 07: Click to 'Register' button
+[INFO ] [2023-07-09 15:04:11,144] Register - Step 08: Verify register success message is displayed
