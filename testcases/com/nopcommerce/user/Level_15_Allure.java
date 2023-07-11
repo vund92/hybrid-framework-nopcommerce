@@ -2,8 +2,6 @@ package com.nopcommerce.user;
 
 import org.testng.annotations.Test;
 
-import com.aventstack.extentreports.Status;
-
 import commons.BaseTest;
 import commons.PageGeneratorManager;
 import io.qameta.allure.Description;
@@ -12,24 +10,16 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
-import pageObjects.nopCommerce.user.UserAddressPageObject;
 import pageObjects.nopCommerce.user.UserCustomerInforPageObject;
 import pageObjects.nopCommerce.user.UserHomePageObject;
 import pageObjects.nopCommerce.user.UserLoginPageObject;
-import pageObjects.nopCommerce.user.UserMyProductReviewPageObject;
 import pageObjects.nopCommerce.user.UserRegisterPageObject;
-import pageObjects.nopCommerce.user.UserRewardPointPageObject;
-import reportConfig.ExtentTestManagerV5;
 
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 
-import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertTrue;
 
-import java.lang.reflect.Method;
 import java.util.Random;
 import org.testng.annotations.AfterClass;
 
@@ -41,9 +31,6 @@ public class Level_15_Allure extends BaseTest{
 	private UserRegisterPageObject registerPage;
 	private UserLoginPageObject loginPage;
 	private UserCustomerInforPageObject customerInforPage; 
-	private UserAddressPageObject addressPage;
-	private UserMyProductReviewPageObject myProductReviewPage;
-	private UserRewardPointPageObject rewardPointPage;
 	String firstName, lastName, emailAddress, validPassword;
 
 	@Parameters("browser")     

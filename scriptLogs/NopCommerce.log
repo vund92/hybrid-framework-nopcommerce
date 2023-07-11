@@ -816,3 +816,104 @@
 [INFO ] [2023-07-09 15:04:10,393] Register - Step 06: Enter to Confirm Password textbox with value is '123456'
 [INFO ] [2023-07-09 15:04:10,501] Register - Step 07: Click to 'Register' button
 [INFO ] [2023-07-09 15:04:11,144] Register - Step 08: Verify register success message is displayed
+[INFO ] [2023-07-09 20:44:07,952] Register Step 01: Navigate to 'Register' page
+[INFO ] [2023-07-09 20:44:08,947] Register Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2023-07-09 20:44:09,076] Register Step 03: Enter to Lastname textbox with value is 'FC'
+[INFO ] [2023-07-09 20:44:09,207] Register Step 04: Enter to Email textbox with value is 'afc8790@mail.vn'
+[INFO ] [2023-07-09 20:44:09,334] Register Step 05: Enter to Password textbox with value is '123456'
+[INFO ] [2023-07-09 20:44:09,451] Register - Step 06: Enter to Confirm Password textbox with value is '123456'
+[INFO ] [2023-07-09 20:44:39,651] Login - Step 01: Navigate to Login page
+[INFO ] [2023-07-09 20:44:40,620] Login - Step 02: Enter to Email textbox with value is 'afc8790@mail.vn'
+[INFO ] [2023-07-09 20:44:40,738] Login Step 03: Enter to Password textbox with value is '123456'
+[INFO ] [2023-07-09 20:44:40,856] Login - Step 04: Click to Login button
+[INFO ] [2023-07-09 20:44:41,290] Login Step 05: Verify 'My Account' link is displayed
+[INFO ] [2023-07-09 20:45:11,339] OS name = windows 11
+[INFO ] [2023-07-09 20:45:11,339] Driver instance name = chromedriver: opera on windows (8cf4388d7982b71d5a8eba3abe8ce856)
+[INFO ] [2023-07-09 20:47:15,486] Register Step 01: Navigate to 'Register' page
+[INFO ] [2023-07-09 20:47:15,963] Register Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2023-07-09 20:47:16,101] Register Step 03: Enter to Lastname textbox with value is 'FC'
+[INFO ] [2023-07-09 20:47:16,230] Register Step 04: Enter to Email textbox with value is 'afc7685@mail.vn'
+[INFO ] [2023-07-09 20:47:16,365] Register Step 05: Enter to Password textbox with value is '123456'
+[INFO ] [2023-07-09 20:47:16,489] Register - Step 06: Enter to Confirm Password textbox with value is '123456'
+[INFO ] [2023-07-09 20:47:16,608] Register - Step 07: Click to 'Register' button
+[INFO ] [2023-07-09 20:47:17,349] Register - Step 08: Verify register success message is displayed
+[INFO ] [2023-07-09 20:47:17,490] Login - Step 01: Navigate to Login page
+[INFO ] [2023-07-09 20:47:17,870] Login - Step 02: Enter to Email textbox with value is 'afc7685@mail.vn'
+[INFO ] [2023-07-09 20:47:17,983] Login Step 03: Enter to Password textbox with value is '123456'
+[INFO ] [2023-07-09 20:47:18,093] Login - Step 04: Click to Login button
+[INFO ] [2023-07-09 20:47:18,773] Login Step 05: Verify 'My Account' link is displayed
+[INFO ] [2023-07-09 20:47:18,821] OS name = windows 11
+[INFO ] [2023-07-09 20:47:18,821] Driver instance name = chromedriver: opera on windows (fb45defc9d1d04f6682d4df9942380d3)
+[INFO ] [2023-07-09 21:17:13,963] Register Step 01: Navigate to 'Register' page
+[INFO ] [2023-07-09 21:17:15,051] Register Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2023-07-09 21:17:15,195] Register Step 03: Enter to Lastname textbox with value is 'FC'
+[INFO ] [2023-07-09 21:17:45,659] Login - Step 01: Navigate to Login page
+[INFO ] [2023-07-09 21:17:46,590] Login - Step 02: Enter to Email textbox with value is 'afc3357@mail.vn'
+[INFO ] [2023-07-09 21:17:46,721] Login Step 03: Enter to Password textbox with value is '123456'
+[INFO ] [2023-07-09 21:17:46,847] Login - Step 04: Click to Login button
+[INFO ] [2023-07-09 21:17:47,258] Login Step 05: Verify 'My Account' link is displayed
+[INFO ] [2023-07-09 21:18:10,063] Register Step 01: Navigate to 'Register' page
+[INFO ] [2023-07-09 21:18:11,297] Register Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2023-07-09 21:18:11,442] Register Step 03: Enter to Lastname textbox with value is 'FC'
+[INFO ] [2023-07-09 21:18:17,642] OS name = windows 11
+[INFO ] [2023-07-09 21:18:17,643] Driver instance name = chromedriver: opera on windows (a175e4fbf42c70ac2adf7a75b141903c)
+[INFO ] [2023-07-09 21:18:17,653] no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.199)
+  (Driver info: operadriver=114.0.5735.110 (1c828682b85bbc70230a48f5e345489ec447373e-refs/branch-heads/5735_90@{#13}),platform=Windows NT 10.0.22621 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'VUND30992', ip: '192.168.100.5', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, browserConnectionEnabled: false, browserName: opera, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:52211}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, opera: {operadriverVersion: 114.0.5735.110 (1c828682b85..., userDataDir: C:\Users\WELCOME\AppData\Lo...}, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 114.0.5735.199, webStorageEnabled: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a175e4fbf42c70ac2adf7a75b141903c
+[INFO ] [2023-07-09 21:18:41,868] Login - Step 01: Navigate to Login page
+[INFO ] [2023-07-09 21:18:42,804] Login - Step 02: Enter to Email textbox with value is 'afc2324@mail.vn'
+[INFO ] [2023-07-09 21:18:42,938] Login Step 03: Enter to Password textbox with value is '123456'
+[INFO ] [2023-07-09 21:18:43,071] Login - Step 04: Click to Login button
+[INFO ] [2023-07-09 21:18:43,444] Login Step 05: Verify 'My Account' link is displayed
+[INFO ] [2023-07-09 21:19:07,007] Register Step 01: Navigate to 'Register' page
+[INFO ] [2023-07-09 21:19:08,124] Register Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2023-07-09 21:19:08,263] Register Step 03: Enter to Lastname textbox with value is 'FC'
+[INFO ] [2023-07-09 21:19:13,501] OS name = windows 11
+[INFO ] [2023-07-09 21:19:13,502] Driver instance name = chromedriver: opera on windows (0b4b02a921281a29d4fc3dfad88784ab)
+[INFO ] [2023-07-09 21:19:13,511] no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.199)
+  (Driver info: operadriver=114.0.5735.110 (1c828682b85bbc70230a48f5e345489ec447373e-refs/branch-heads/5735_90@{#13}),platform=Windows NT 10.0.22621 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'VUND30992', ip: '192.168.100.5', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, browserConnectionEnabled: false, browserName: opera, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:52282}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, opera: {operadriverVersion: 114.0.5735.110 (1c828682b85..., userDataDir: C:\Users\WELCOME\AppData\Lo...}, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 114.0.5735.199, webStorageEnabled: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0b4b02a921281a29d4fc3dfad88784ab
+[INFO ] [2023-07-09 21:19:38,722] Login - Step 01: Navigate to Login page
+[INFO ] [2023-07-09 21:19:39,226] Login - Step 02: Enter to Email textbox with value is 'afc819@mail.vn'
+[INFO ] [2023-07-09 21:19:39,357] Login Step 03: Enter to Password textbox with value is '123456'
+[INFO ] [2023-07-09 21:19:39,484] Login - Step 04: Click to Login button
+[INFO ] [2023-07-09 21:19:39,877] Login Step 05: Verify 'My Account' link is displayed
+[INFO ] [2023-07-09 21:20:09,906] OS name = windows 11
+[INFO ] [2023-07-09 21:20:09,907] Driver instance name = chromedriver: opera on windows (973d65387274caa8e7a6aa4ef6e590e4)
+[INFO ] [2023-07-09 21:35:56,861] Register Step 01: Navigate to 'Register' page
+[INFO ] [2023-07-09 21:35:58,052] Register Step 02: Enter to Firstname textbox with value is 'Automation'
+[INFO ] [2023-07-09 21:35:58,188] Register Step 03: Enter to Lastname textbox with value is 'FC'
+[INFO ] [2023-07-09 21:36:28,659] Login - Step 01: Navigate to Login page
+[INFO ] [2023-07-09 21:36:29,583] Login - Step 02: Enter to Email textbox with value is 'afc8700@mail.vn'
+[INFO ] [2023-07-09 21:36:29,715] Login Step 03: Enter to Password textbox with value is '123456'
+[INFO ] [2023-07-09 21:36:29,841] Login - Step 04: Click to Login button
+[INFO ] [2023-07-09 21:36:30,225] Login Step 05: Verify 'My Account' link is displayed
+[INFO ] [2023-07-09 21:37:00,734] My Account Step 01: Navigate to 'My Account' page
+[INFO ] [2023-07-09 21:37:30,767] OS name = windows 11
+[INFO ] [2023-07-09 21:37:30,768] Driver instance name = chromedriver: opera on windows (db3000b019d2e50121b6dd6843c970cd)
+[INFO ] [2023-07-09 21:37:30,780] no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.199)
+  (Driver info: operadriver=114.0.5735.110 (1c828682b85bbc70230a48f5e345489ec447373e-refs/branch-heads/5735_90@{#13}),platform=Windows NT 10.0.22621 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'VUND30992', ip: '192.168.100.5', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, browserConnectionEnabled: false, browserName: opera, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:52943}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, opera: {operadriverVersion: 114.0.5735.110 (1c828682b85..., userDataDir: C:\Users\WELCOME\AppData\Lo...}, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 114.0.5735.199, webStorageEnabled: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: db3000b019d2e50121b6dd6843c970cd
+[INFO ] [2023-07-09 21:39:51,814] OS name = windows 11
+[INFO ] [2023-07-09 21:39:51,815] 
