@@ -29,6 +29,7 @@ import pageObjects.nopCommerce.user.UserCustomerInforPageObject;
 import pageObjects.nopCommerce.user.UserHomePageObject;
 import pageObjects.nopCommerce.user.UserMyProductReviewPageObject;
 import pageObjects.nopCommerce.user.UserRewardPointPageObject;
+import pageObjects.wordpress.AdminDashboardPO;
 import pageObjects.wordpress.UserHomePO;
 import pageUIs.jQuery.uploadFile.BasePageUI_JQueryUpload;
 import pageUIs.nopCommerce.user.BasePageUI_NopCommerce;
@@ -201,6 +202,11 @@ public class BasePage {
 		element.sendKeys(textValue);
 	}
 
+	public void clearValueInElementByDeleteKey(WebDriver driver, String locatorType) {
+		WebElement element = this.getWebElement(driver, locatorType);
+		element.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
+	}
+	
 	public String getElementText(WebDriver driver, String locatorType) {
 		return getWebElement(driver, locatorType).getText();
 	}
@@ -211,7 +217,9 @@ public class BasePage {
 
 	public void selectItemInDefaultDropdown(WebDriver driver, String locatorType, String textItem) {
 		Select select = new Select(getWebElement(driver, locatorType));
-		select.selectByValue(textItem);
+		//select.selectByValue(textItem);
+		
+		select.selectByVisibleText(textItem);
 	}
 
 	public void selectItemInDefaultDropdown(WebDriver driver, String locatorType, String textItem,
@@ -330,17 +338,14 @@ public class BasePage {
 		}
 	}
 
-	/*
-	 * public boolean isElementUndisplayed(WebDriver driver, String locatorType) {
-	 * boolean status = true; if (getWebElement(driver, locatorType).isDisplayed())
-	 * { status = false; } return status; }
-	 */
+	public boolean isElementDisplayed(WebDriver driver, String locatorType, String... dynamicValues) {
+		return getWebElement(driver, getDynamicXpath(locatorType, dynamicValues)).isDisplayed();
+	}
 
-	// Case 2+3
-	public boolean isElementUndisplayed(WebDriver driver, String locator) {
+	public boolean isElementUndisplayed(WebDriver driver, String locatorType) {
 		// System.out.println("Start time = " + new Date().toString());
 		overrideImplicitTimeout(driver, GlobalConstants.SHORT_TIMEOUT);
-		List<WebElement> elements = getListWebElement(driver, locator);
+		List<WebElement> elements = getListWebElement(driver, locatorType);
 		overrideImplicitTimeout(driver, GlobalConstants.LONG_TIMEOUT);
 		if (elements.size() == 0) {
 			// System.out.println("Case 3 - Element not in DOM");
@@ -357,11 +362,28 @@ public class BasePage {
 			return false;
 		}
 	}
-
-	public boolean isElementDisplayed(WebDriver driver, String locatorType, String... dynamicValues) {
-		return getWebElement(driver, getDynamicXpath(locatorType, dynamicValues)).isDisplayed();
+	
+	public boolean isElementUndisplayed(WebDriver driver, String locator, String... dynamicValues) {
+		// System.out.println("Start time = " + new Date().toString());
+		overrideImplicitTimeout(driver, GlobalConstants.SHORT_TIMEOUT);
+		List<WebElement> elements = getListWebElement(driver, getDynamicXpath(locator, dynamicValues));
+		overrideImplicitTimeout(driver, GlobalConstants.LONG_TIMEOUT);
+		if (elements.size() == 0) {
+			// System.out.println("Case 3 - Element not in DOM");
+			// System.out.println("End time = " + new Date().toString());
+			return true;
+			// Nó có kích thước = 1 (Có trong DOM)
+			// Ko được hiển thị
+		} else if (elements.size() > 0 && !elements.get(0).isDisplayed()) {
+			// System.out.println("Case 2 - Element in DOM but not visible/ displayed");
+			// System.out.println("End time = " + new Date().toString());
+			return true;
+		} else {
+			// System.out.println("Case 1 - Element in DOM and visible");
+			return false;
+		}
 	}
-
+	
 	public void overrideImplicitTimeout(WebDriver driver, long timeOut) {
 		driver.manage().timeouts().implicitlyWait(timeOut, TimeUnit.SECONDS);
 	}
@@ -762,6 +784,11 @@ public class BasePage {
 	public UserHomePO openEndUserSite(WebDriver driver, String endUserUrl) {
 		openPageUrl(driver, endUserUrl);
 		return pageObjects.wordpress.PageGeneratorManager.getUserHomePage(driver);
+	}
+	
+	public AdminDashboardPO openAdminSite(WebDriver driver, String adminUrl) {
+		openPageUrl(driver, adminUrl);
+		return pageObjects.wordpress.PageGeneratorManager.getAdminDashboardPage(driver);
 	}
 	
 	private long longTimeout = GlobalConstants.LONG_TIMEOUT;

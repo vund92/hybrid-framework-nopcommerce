@@ -28,6 +28,23 @@ public class AdminPostAddNewPO extends BasePage {
 		waitForElementVisible(driver, AdminPostAddNewPageUI.BODY_TEXTBOX);
 		sendkeyToElement(driver, AdminPostAddNewPageUI.BODY_TEXTBOX, postBodyValue);
 	}
+	
+	@Step("Create_Post - Enter to edit body")
+	public void enterToEditPostBody(String postBodyValue) {
+		waitForElementClickable(driver, AdminPostAddNewPageUI.BODY_TEXTBOX);
+		clickToElement(driver, AdminPostAddNewPageUI.BODY_TEXTBOX);
+		
+		waitForElementVisible(driver, AdminPostAddNewPageUI.BODY_TEXTBOX);
+		clearValueInElementByDeleteKey(driver, AdminPostAddNewPageUI.BODY_TEXTBOX);
+		sleepInSecond(5);
+		sendkeyToElement(driver, AdminPostAddNewPageUI.BODY_TEXTBOX, postBodyValue);
+	}
+	
+	@Step("Create_Post - Click to publish or update button")
+	public void clickToPublishOrUpdateButton() {
+		waitForElementClickable(driver, AdminPostAddNewPageUI.PUBLISH_OR_UPDATE_BUTTON);
+		clickToElement(driver, AdminPostAddNewPageUI.PUBLISH_OR_UPDATE_BUTTON);
+	}
 
 	@Step("Create_Post - Click to 'Publish' button")
 	public void clickToPublishButton() {
@@ -39,8 +56,8 @@ public class AdminPostAddNewPO extends BasePage {
 
 	@Step("Create_Post - Verify 'Post published' message is displayed")
 	public boolean isPostPublishMessageDisplayed(String postPublishedMessage) {
-		waitForElementVisible(driver, AdminPostAddNewPageUI.PUBLISHED_MESSAGE, postPublishedMessage);
-		return isElementDisplayed(driver, AdminPostAddNewPageUI.PUBLISHED_MESSAGE, postPublishedMessage);
+		waitForElementVisible(driver, AdminPostAddNewPageUI.PUBLISHED_OR_UPDATE_MESSAGE, postPublishedMessage);
+		return isElementDisplayed(driver, AdminPostAddNewPageUI.PUBLISHED_OR_UPDATE_MESSAGE, postPublishedMessage);
 	}
 
 	@Step("Search_Post - Open 'Search Post' page")
