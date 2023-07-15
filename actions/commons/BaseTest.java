@@ -2,6 +2,7 @@ package commons;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -16,6 +17,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.opera.OperaDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -102,6 +105,10 @@ public class BaseTest {
 
 		if (browserList == BrowserList.FIREFOX) {
 			WebDriverManager.firefoxdriver().setup();
+			
+			System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true");
+			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, GlobalConstants.PROJECT_PATH + "//browserLogs//FirefoxLog.log");
+			
 			driver = new FirefoxDriver();
 		} else if (browserList == BrowserList.H_FIREFOX) {
 			WebDriverManager.firefoxdriver().setup();
@@ -155,6 +162,10 @@ public class BaseTest {
 	protected WebDriver getBrowserDriver(String browserName, String appUrl) {
 		if (browserName.equals("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
+			
+			System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true");
+			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, GlobalConstants.PROJECT_PATH + "//browserLogs//FirefoxLog.log");
+			
 			FirefoxOptions options = new FirefoxOptions();
 			options.setAcceptInsecureCerts(false);
 			driver = new FirefoxDriver(options);
@@ -364,5 +375,18 @@ public class BaseTest {
 
 	protected String getCurrentDay() {
 	return getCurrentDate() + "/" + getCurrentMonth() + "/" + getCurrentYear();
+	}
+	
+	protected void showBrowserConsoleLogs(WebDriver driver) {
+		if (driver.toString().contains("chrome") || driver.toString().contains("edge")) {
+			LogEntries logs = driver.manage().logs().get("browser");
+			List<LogEntry> logList = logs.getAll();
+			for (LogEntry logging : logList) {
+				if (logging.getLevel().toString().toLowerCase().contains("error")) {
+					log.info("---------------" + logging.getLevel().toString() + "---------------\n"
+							+ logging.getMessage());
+				}
+			}
+		}
 	}
 }

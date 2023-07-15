@@ -1,5 +1,9 @@
 package commons;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
@@ -206,7 +210,7 @@ public class BasePage {
 		WebElement element = this.getWebElement(driver, locatorType);
 		element.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 	}
-	
+
 	public String getElementText(WebDriver driver, String locatorType) {
 		return getWebElement(driver, locatorType).getText();
 	}
@@ -217,8 +221,8 @@ public class BasePage {
 
 	public void selectItemInDefaultDropdown(WebDriver driver, String locatorType, String textItem) {
 		Select select = new Select(getWebElement(driver, locatorType));
-		//select.selectByValue(textItem);
-		
+		// select.selectByValue(textItem);
+
 		select.selectByVisibleText(textItem);
 	}
 
@@ -362,7 +366,7 @@ public class BasePage {
 			return false;
 		}
 	}
-	
+
 	public boolean isElementUndisplayed(WebDriver driver, String locator, String... dynamicValues) {
 		// System.out.println("Start time = " + new Date().toString());
 		overrideImplicitTimeout(driver, GlobalConstants.SHORT_TIMEOUT);
@@ -383,7 +387,7 @@ public class BasePage {
 			return false;
 		}
 	}
-	
+
 	public void overrideImplicitTimeout(WebDriver driver, long timeOut) {
 		driver.manage().timeouts().implicitlyWait(timeOut, TimeUnit.SECONDS);
 	}
@@ -738,12 +742,13 @@ public class BasePage {
 	 * 
 	 * @param driver
 	 * @param radioButtonLabelName
-	 * */
+	 */
 	public void clickToRadioButtonByLabel(WebDriver driver, String radioButtonLabelName) {
 		waitForElementClickable(driver, BasePageUI_NopCommerce.DYNAMIC_RADIO_BUTTON_BY_LABEL, radioButtonLabelName);
-		checkToDefaultCheckboxOrRadio(driver,BasePageUI_NopCommerce.DYNAMIC_RADIO_BUTTON_BY_LABEL, radioButtonLabelName);
+		checkToDefaultCheckboxOrRadio(driver, BasePageUI_NopCommerce.DYNAMIC_RADIO_BUTTON_BY_LABEL,
+				radioButtonLabelName);
 	}
-	
+
 	/**
 	 * Click to dynamic checkbox by label name
 	 *
@@ -754,7 +759,7 @@ public class BasePage {
 		waitForElementClickable(driver, BasePageUI_NopCommerce.DYNAMIC_CHECKBOX_BY_LABEL, checkboxLabelName);
 		checkToDefaultCheckboxOrRadio(driver, BasePageUI_NopCommerce.DYNAMIC_CHECKBOX_BY_LABEL, checkboxLabelName);
 	}
-	
+
 	/**
 	 * Get value in textbox by textboxID
 	 *
@@ -785,12 +790,135 @@ public class BasePage {
 		openPageUrl(driver, endUserUrl);
 		return pageObjects.wordpress.PageGeneratorManager.getUserHomePage(driver);
 	}
-	
+
 	public AdminDashboardPO openAdminSite(WebDriver driver, String adminUrl) {
 		openPageUrl(driver, adminUrl);
 		return pageObjects.wordpress.PageGeneratorManager.getAdminDashboardPage(driver);
 	}
-	
+
+	// saucelab
+	public boolean isDataFloatSortedAscending(WebDriver driver, String locatorType) {
+		// Khai báo 1 Array List
+		ArrayList<Float> arrayList = new ArrayList<Float>();
+
+		// Tìm tất cả element matching vs điều kiện (Name/ Price..)
+		List<WebElement> elementList = driver.findElements(getByLocator(locatorType));
+
+		// Lấy text của từng element add vào Array List
+		for (WebElement element : elementList) {
+			arrayList.add(Float.parseFloat(element.getText().replace("$", "").trim()));
+		}
+
+		System.out.println("-----Dữ liệu trên UI-----");
+		for (Float name : arrayList) {
+			System.out.println(name);
+		}
+
+		// Copy qua 1 array list mới để SORT trong Code
+		ArrayList<Float> sortedList = new ArrayList<Float>();
+		for (Float child : arrayList) {
+			sortedList.add(child);
+		}
+
+		// Thực hiện SORT ASC
+		Collections.sort(sortedList);
+
+		System.out.println("-----Dữ liệu đã SORT ASC trong code-----");
+		for (Float name : sortedList) {
+			System.out.println(name);
+		}
+		// Verify 2 array bằng nhau - nếu dữ liệu sort trên UI ko chính xác thì kết quả
+		// trả về sai
+		return sortedList.equals(arrayList);
+	}
+
+	public boolean isDataFloatSortedDescending(WebDriver driver, String locatorType) {
+		// Khai báo 1 Array List
+		ArrayList<Float> arrayList = new ArrayList<Float>();
+
+		// Tìm tất cả element matching vs điều kiện (Name/ Price..)
+		List<WebElement> elementList = driver.findElements(getByLocator(locatorType));
+
+		// Lấy text của từng element add vào Array List
+		for (WebElement element : elementList) {
+			arrayList.add(Float.parseFloat(element.getText().replace("$", "").trim()));
+		}
+
+		System.out.println("-----Dữ liệu trên UI-----");
+		for (Float name : arrayList) {
+			System.out.println(name);
+		}
+
+		// Copy qua 1 array list mới để SORT trong Code
+		ArrayList<Float> sortedList = new ArrayList<Float>();
+		for (Float child : arrayList) {
+			sortedList.add(child);
+		}
+
+		// Thực hiện SORT ASC
+		Collections.sort(sortedList);
+
+		System.out.println("-----Dữ liệu đã SORT ASC trong code-----");
+		for (Float name : sortedList) {
+			System.out.println(name);
+		}
+
+		// Reverse cái productSortList
+		Collections.reverse(sortedList);
+
+		System.out.println("-----Dữ liệu đã SORT DESC trong code-----");
+		for (Float name : sortedList) {
+			System.out.println(name);
+		}
+
+		// Verify 2 array bằng nhau - nếu dữ liệu sort trên UI ko chính xác thì kết quả
+		// trả về sai
+		return sortedList.equals(arrayList);
+	}
+
+	public boolean isDataDateSortedAscending(WebDriver driver, String locator) {
+		ArrayList<Date> arrayList = new ArrayList<Date>();
+
+		List<WebElement> elementList = driver.findElements(By.xpath(locator));
+
+		for (WebElement element : elementList) {
+			arrayList.add(convertStringToDate(element.getText()));
+		}
+
+		System.out.println("-----Dữ liệu trên UI-----");
+
+		for (Date name : arrayList) {
+			System.out.println(name);
+		}
+
+		ArrayList<Date> sortedList = new ArrayList<Date>();
+		for (Date child : arrayList) {
+			sortedList.add(child);
+		}
+
+		Collections.sort(sortedList);
+
+		System.out.println("-----Dữ liệu đã SORT ASC trong code-----");
+		for (Date name : sortedList) {
+			System.out.println(name);
+		}
+
+		return sortedList.equals(arrayList);
+
+	}
+
+	public Date convertStringToDate(String datelnString) {
+		datelnString = datelnString.replace(",", "");
+		SimpleDateFormat formatter = new SimpleDateFormat("MMM dd yyyy");
+		Date date = null;
+		try {
+			date = formatter.parse(datelnString);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		return date;
+	}
+
 	private long longTimeout = GlobalConstants.LONG_TIMEOUT;
 	private long shortTimeout = GlobalConstants.SHORT_TIMEOUT;
 }

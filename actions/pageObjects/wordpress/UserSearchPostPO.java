@@ -12,8 +12,8 @@ public class UserSearchPostPO extends BasePage {
 		this.driver = driver;
 	}
 
-	public boolean isNothingFoundMessageDisplayed(String message) {
-		waitForElementVisible(driver, UserSearchPostPageUI.NOTHING_FOUND_MESSAGE, message);
-		return isElementDisplayed(driver, UserSearchPostPageUI.NOTHING_FOUND_MESSAGE, message);
+	public boolean isNothingFoundMessageDisplayed() {
+		waitForElementVisible(driver, UserSearchPostPageUI.NOTHING_FOUND_MESSAGE);
+		return isElementDisplayed(driver, UserSearchPostPageUI.NOTHING_FOUND_MESSAGE);
 	}
 }

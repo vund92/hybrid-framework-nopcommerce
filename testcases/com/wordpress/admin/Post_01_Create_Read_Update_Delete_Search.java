@@ -1,12 +1,15 @@
 package com.wordpress.admin;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxDriver.SystemProperty;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
+import commons.GlobalConstants;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -48,6 +51,8 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 		this.endUserUrl = endUserUrl;
 		driver = getBrowserDriver (browserName, this.adminUrl);
 		adminLoginPage = PageGeneratorManager.getAdminLoginPage(driver);
+		
+		showBrowserConsoleLogs(driver);
 		
 		log.info("Pre-Condition Step 02: Enter to Username textbox with value: " + adminUsername);
 		adminLoginPage.enterToUsernameTextbox(adminUsername);
@@ -242,7 +247,7 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 		userSearchPostPage = userHomePage.clickToSearchButton();
 		
 		log.info("Delete_Post - Step 16: Verify 'Nothing Found' message is displayed"); 
-		verifyTrue(userSearchPostPage.isNothingFoundMessageDisplayed("No posts found."));
+		verifyTrue(userSearchPostPage.isNothingFoundMessageDisplayed());
 	}
 	
 	@AfterClass(alwaysRun = true)
