@@ -10,35 +10,36 @@ public class LoginPageObject extends BasePage{
 	WebDriver driver;
 	
 	public LoginPageObject(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
 	}
 	
 	public void clickToCreateNewAccountButton() {
-		waitForElementClickable (driver, LoginPageUI.CREATE_NEW_ACCOUNT_BUTTON); 
-		clickToElement (driver, LoginPageUI.CREATE_NEW_ACCOUNT_BUTTON);
+		waitForElementClickable (LoginPageUI.CREATE_NEW_ACCOUNT_BUTTON); 
+		clickToElement (LoginPageUI.CREATE_NEW_ACCOUNT_BUTTON);
 		}
 	
 		public boolean isEmailAddressTextboxDisplayed () {
-		waitForElementVisible (driver, LoginPageUI.EMAIL_ADDRESS_TEXTBOX);
-		return isElementDisplayed (driver, LoginPageUI.EMAIL_ADDRESS_TEXTBOX);
+		waitForElementVisible (LoginPageUI.EMAIL_ADDRESS_TEXTBOX);
+		return isElementDisplayed (LoginPageUI.EMAIL_ADDRESS_TEXTBOX);
 		}
 		
 		public void enterToEmailAddressTextbox(String emailAddress) {
-			waitForElementVisible(driver, LoginPageUI.EMAIL_ADDRESS_TEXTBOX);
-			sendkeyToElement(driver, LoginPageUI.EMAIL_ADDRESS_TEXTBOX, emailAddress);
+			waitForElementVisible(LoginPageUI.EMAIL_ADDRESS_TEXTBOX);
+			sendkeyToElement(LoginPageUI.EMAIL_ADDRESS_TEXTBOX, emailAddress);
 		}
 
 		public boolean isConfirmEmailAddressTextboxDisplayed() {
-			return isElementDisplayed(driver, LoginPageUI.CONFIRM_EMAIL_ADDRESS_TEXTBOX);
+			return isElementDisplayed(LoginPageUI.CONFIRM_EMAIL_ADDRESS_TEXTBOX);
 		}
 
 		public void clickCloseIconAtRegisterForm() {
-			waitForElementClickable(driver, LoginPageUI.CLOSE_ICON); 
-			clickToElement(driver, LoginPageUI.CLOSE_ICON);
+			waitForElementClickable(LoginPageUI.CLOSE_ICON); 
+			clickToElement(LoginPageUI.CLOSE_ICON);
 		}
 
 		public boolean isConfirmEmailAddressTextboxUndisplayed() {
-			waitForElementUndisplayed(driver, LoginPageUI.CONFIRM_EMAIL_ADDRESS_TEXTBOX);
-			return isElementUndisplayed(driver, LoginPageUI.CONFIRM_EMAIL_ADDRESS_TEXTBOX);
+			waitForElementUndisplayed(LoginPageUI.CONFIRM_EMAIL_ADDRESS_TEXTBOX);
+			return isElementUndisplayed(LoginPageUI.CONFIRM_EMAIL_ADDRESS_TEXTBOX);
 		}
 }

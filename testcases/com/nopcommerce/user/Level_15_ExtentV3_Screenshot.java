@@ -64,9 +64,9 @@ public class Level_15_ExtentV3_Screenshot extends BaseTest{
 		if(homePage.isLoginLinkUndisplayed() ) {
 			homePage = registerPage.clickToLogoutLink();
 			
-			loginPage = homePage.openLoginPage();
+			loginPage = registerPage.openLoginPage();
 		} else {
-			loginPage = homePage.openLoginPage();
+			loginPage = registerPage.openLoginPage();
 		}
 		
 		loginPage.inputToEmailTextbox(emailAddress);

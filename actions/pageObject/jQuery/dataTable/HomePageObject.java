@@ -14,37 +14,38 @@ public class HomePageObject extends BasePage{
 	WebDriver driver;
 	
 	public HomePageObject(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
 	}
 
 	public void openPagingByPageNumber(String pageNumber) {
-		waitForElementClickable(driver, HomePageUI.PAGINATION_PAGE_BY_NUMBER, pageNumber);
-		clickToElement(driver, HomePageUI.PAGINATION_PAGE_BY_NUMBER, pageNumber);
+		waitForElementClickable(HomePageUI.PAGINATION_PAGE_BY_NUMBER, pageNumber);
+		clickToElement(HomePageUI.PAGINATION_PAGE_BY_NUMBER, pageNumber);
 	}
 
 	public void enterToHeaderTextboxByLabel(String headerLabel, String value) {
-		waitForElementVisible(driver, HomePageUI.HEADER_TEXTBOX_BY_LABEL, headerLabel);
-		sendkeyToElement(driver, HomePageUI.HEADER_TEXTBOX_BY_LABEL, value, headerLabel);	
-		pressKeyToElement(driver, HomePageUI.HEADER_TEXTBOX_BY_LABEL, Keys.ENTER, headerLabel);
+		waitForElementVisible(HomePageUI.HEADER_TEXTBOX_BY_LABEL, headerLabel);
+		sendkeyToElement(HomePageUI.HEADER_TEXTBOX_BY_LABEL, value, headerLabel);	
+		pressKeyToElement(HomePageUI.HEADER_TEXTBOX_BY_LABEL, Keys.ENTER, headerLabel);
 	}
 
 	public boolean isPageNumberActived(String pageNumber) {
-		waitForElementVisible(driver, HomePageUI.PAGINATION_PAGE_ACTIVED_BY_NUMBER, pageNumber);
-		return isElementDisplayed(driver, HomePageUI.PAGINATION_PAGE_ACTIVED_BY_NUMBER, pageNumber);
+		waitForElementVisible(HomePageUI.PAGINATION_PAGE_ACTIVED_BY_NUMBER, pageNumber);
+		return isElementDisplayed(HomePageUI.PAGINATION_PAGE_ACTIVED_BY_NUMBER, pageNumber);
 	}
 	
 	public List<String> getValueEachRowAtAllPage() {
-		int totalPage = getElementSize(driver, HomePageUI.TOTAL_PAGINATION);
+		int totalPage = getElementSize(HomePageUI.TOTAL_PAGINATION);
 		System.out.println("Total size = " + totalPage);
 		
 		List<String> allRowValueAllPage = new ArrayList<String>();
 		
 		// Duyệt qua tất cả các page number (paging)
 		for (int index = 1; index < totalPage; index++) {
-			clickToElement(driver, HomePageUI.PAGINATION_PAGE_BY_INDEX, String.valueOf(index));
+			clickToElement(HomePageUI.PAGINATION_PAGE_BY_INDEX, String.valueOf(index));
 			
 			// Get text của all row mỗi page đưa vào ArrayList
-			List<WebElement> allRowElementEachPage = getListWebElement(driver, HomePageUI.ALL_ROW_COUNTRY_EACH_PAGE);
+			List<WebElement> allRowElementEachPage = getListWebElement(HomePageUI.ALL_ROW_COUNTRY_EACH_PAGE);
 			for (WebElement eachRow : allRowElementEachPage) {
 				allRowValueAllPage.add(eachRow.getText());
 			}
@@ -61,45 +62,45 @@ public class HomePageObject extends BasePage{
 
 	public void enterToTextboxByColumnNameAtRowNumber(String columnName, String rowNumber, String value) {
 		// Column Index dựa vào cột
-		int columnIndex = getElementSize(driver, HomePageUI.COLUMN_INDEX_BY_NAME, columnName) + 1;
+		int columnIndex = getElementSize(HomePageUI.COLUMN_INDEX_BY_NAME, columnName) + 1;
 		System.out.println("Column:  " + columnIndex);
 		
-		waitForElementVisible (driver, HomePageUI. TEXTBOX_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber, String.valueOf(columnIndex)); 
-		sendkeyToElement(driver, HomePageUI.TEXTBOX_BY_COLUMN_INDEX_AND_ROW_INDEX, value, rowNumber, String.valueOf(columnIndex));
+		waitForElementVisible (HomePageUI. TEXTBOX_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber, String.valueOf(columnIndex)); 
+		sendkeyToElement(HomePageUI.TEXTBOX_BY_COLUMN_INDEX_AND_ROW_INDEX, value, rowNumber, String.valueOf(columnIndex));
 		
 	}
 	
 	public void selectDropdownByColumnNameAtRowNumber(String columnName, String rowNumber, String valueToSelect) {
-		int columnIndex = getElementSize(driver, HomePageUI.COLUMN_INDEX_BY_NAME, columnName) + 1;
-		waitForElementClickable(driver, HomePageUI.DROPDOWN_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber,
+		int columnIndex = getElementSize(HomePageUI.COLUMN_INDEX_BY_NAME, columnName) + 1;
+		waitForElementClickable(HomePageUI.DROPDOWN_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber,
 				String.valueOf(columnIndex));
-		selectItemInDefaultDropdown(driver, HomePageUI.DROPDOWN_BY_COLUMN_INDEX_AND_ROW_INDEX, valueToSelect, rowNumber,
+		selectItemInDefaultDropdown(HomePageUI.DROPDOWN_BY_COLUMN_INDEX_AND_ROW_INDEX, valueToSelect, rowNumber,
 				String.valueOf(columnIndex));
 	}
 
 	public void clickToLoadButton() {
-		waitForElementClickable(driver, HomePageUI.LOAD_BUTTON);
-		clickToElement(driver, HomePageUI.LOAD_BUTTON);
+		waitForElementClickable(HomePageUI.LOAD_BUTTON);
+		clickToElement(HomePageUI.LOAD_BUTTON);
 	}
 
 	public void checkToCheckboxByColumnNameAtRowNumber(String columnName, String rowNumber) {
-		int columnIndex = getElementSize(driver, HomePageUI.COLUMN_INDEX_BY_NAME, columnName) + 1;
-		waitForElementClickable(driver, HomePageUI.CHECKBOX_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber,
+		int columnIndex = getElementSize(HomePageUI.COLUMN_INDEX_BY_NAME, columnName) + 1;
+		waitForElementClickable(HomePageUI.CHECKBOX_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber,
 				String.valueOf(columnIndex));
-		checkToDefaultCheckboxOrRadio(driver, HomePageUI.CHECKBOX_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber,
+		checkToDefaultCheckboxOrRadio(HomePageUI.CHECKBOX_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber,
 				String.valueOf(columnIndex));
 	}
 
 	public void uncheckToCheckboxByColumnNameAtRowNumber(String columnName, String rowNumber) {
-		int columnIndex = getElementSize(driver, HomePageUI.COLUMN_INDEX_BY_NAME, columnName) + 1;
-		waitForElementClickable(driver, HomePageUI.CHECKBOX_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber,
+		int columnIndex = getElementSize(HomePageUI.COLUMN_INDEX_BY_NAME, columnName) + 1;
+		waitForElementClickable(HomePageUI.CHECKBOX_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber,
 				String.valueOf(columnIndex));
-		uncheckToDefaultCheckbox(driver, HomePageUI.CHECKBOX_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber,
+		uncheckToDefaultCheckbox(HomePageUI.CHECKBOX_BY_COLUMN_INDEX_AND_ROW_INDEX, rowNumber,
 				String.valueOf(columnIndex));
 	}
 	
 	public void clickToIconByRowNumber(String rowNumber, String iconName) {
-		waitForElementClickable(driver, HomePageUI.ICON_NAME_BY_ROW_NUMBER, rowNumber, iconName);
-		clickToElement(driver, HomePageUI.ICON_NAME_BY_ROW_NUMBER, rowNumber, iconName);
+		waitForElementClickable(HomePageUI.ICON_NAME_BY_ROW_NUMBER, rowNumber, iconName);
+		clickToElement(HomePageUI.ICON_NAME_BY_ROW_NUMBER, rowNumber, iconName);
 	}
 }

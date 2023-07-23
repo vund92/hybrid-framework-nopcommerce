@@ -73,7 +73,7 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 		adminPostSearchPage = adminDashboardPage.clickToPostMenuLink();
 		
 		log.info("Create_Post - Step 02: Get 'Search Posts' page Url");
-		searchPostUrl = adminPostSearchPage.getPageUrl(driver);
+		searchPostUrl = adminPostSearchPage.getPageUrl();
 		
 		log.info("Create_Post - Step 03: Click to 'Add New' button"); 
 		adminPostAddNewPage = adminPostSearchPage.clickToAddNewButton();
@@ -112,7 +112,7 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 		verifyTrue(adminPostSearchPage.isPostSearchTableDisplayed("author", authorName));
 		
 		log.info("Search_Post - Step 06: Open End User site");
-		userHomePage = adminPostSearchPage.openEndUserSite(driver, this.endUserUrl);
+		userHomePage = adminPostSearchPage.openEndUserSite(this.endUserUrl);
 		
 		log.info("Search_Post - Step 07: Verify Post infor displayed at Home page");
 		verifyTrue(userHomePage.isPostInforDisplayedWithPostTitle(postTitle)); 
@@ -136,7 +136,7 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 	@Test
 	public void Post_03_Edit_Post() {
 		log.info("Edit_Post Step 01: Open Admin site");
-		adminDashboardPage = userPostDetailPage.openAdminSite(driver, this.adminUrl);
+		adminDashboardPage = userPostDetailPage.openAdminSite(this.adminUrl);
 		
 		log.info("Edit_Post - Step 02: Click to 'Posts' menu link"); 
 		adminPostSearchPage = adminDashboardPage.clickToPostMenuLink();
@@ -178,7 +178,7 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 		verifyTrue (adminPostSearchPage.isPostSearchTableDisplayed("author", authorName));
 		
 		log.info("Edit_Post Step 13: Open End User site");
-		userHomePage = adminPostSearchPage.openEndUserSite(driver, this.endUserUrl);
+		userHomePage = adminPostSearchPage.openEndUserSite(this.endUserUrl);
 		
 		log.info("Edit_Post Step 14: Verify Post infor displayed at Home page"); 
 		verifyTrue(userHomePage.isPostInforDisplayedWithPostTitle(editPostTitle));
@@ -202,7 +202,7 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 	@Test
 	public void Post_04_Delete_Post() {
 		log.info("Delete_Post - Step 01: Open Admin site");
-		adminDashboardPage = userPostDetailPage.openAdminSite(driver, this.adminUrl);
+		adminDashboardPage = userPostDetailPage.openAdminSite(this.adminUrl);
 
 		log.info("Delete_Post - Step 02: Click to 'Posts' menu link");
 		adminPostSearchPage = adminDashboardPage.clickToPostMenuLink();
@@ -235,7 +235,7 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 		verifyTrue (adminPostSearchPage.isNoPostFoundMessageDisplayed("No posts found."));
 		
 		log.info("Delete_Post - Step 12: Open End User site");
-		userHomePage = adminPostSearchPage.openEndUserSite(driver, this.endUserUrl);
+		userHomePage = adminPostSearchPage.openEndUserSite(this.endUserUrl);
 		
 		log.info("Delete_Post - Step 13: Verify Post title undisplayed at Home page"); 
 		verifyTrue(userHomePage.isPostInforUndisplayedWithPostTitle(editPostTitle));
@@ -250,9 +250,10 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 		verifyTrue(userSearchPostPage.isNothingFoundMessageDisplayed());
 	}
 	
+	@Parameters({"envName"})
 	@AfterClass(alwaysRun = true)
-	public void afterClass() {
-		closeBrowserDriver();
+	public void afterClass(String envName) {
+		closeBrowserDriver(envName);
 	}
 	
 	WebDriver driver;

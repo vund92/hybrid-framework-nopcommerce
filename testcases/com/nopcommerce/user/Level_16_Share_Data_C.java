@@ -42,16 +42,16 @@ public class Level_16_Share_Data_C extends BaseTest{
 		validPassword = Common_01_Register_End_User.password;
 		
 		log.info("Pre-condition - Step 01: Navigate to Login page"); 
-		loginPage = homePage.openLoginPage();
+		loginPage = registerPage.openLoginPage();
 		
 		log.info("Pre-condition - Step 2: Set cookie and reload page");
-		loginPage.setCookies(driver, Common_01_Register_Cookie.loggedCookies);
+		loginPage.setCookies(Common_01_Register_Cookie.loggedCookies);
 		
 		for(Cookie cookie : Common_01_Register_Cookie.loggedCookies) {
 			System.out.println("Cookie at C Class" + cookie);
 		}
 		
-		loginPage.refreshCurrentPage(driver);
+		loginPage.refreshCurrentPage();
 		
 //		log.info("Pre-condition - Step 02: Enter to Email textbox with value is '" + emailAddress + "'"); 
 //		loginPage.inputToEmailTextbox(emailAddress);

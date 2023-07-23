@@ -66,9 +66,10 @@ public class Level_19_Sort_Asc_Desc extends BaseTest {
 		Assert.assertTrue(productPage.isProductPriceSortByDescendingNew(driver));
 	}
 
+	@Parameters({"envName"})
 	@AfterClass(alwaysRun = true)
-	public void afterClass() {
-		closeBrowserDriver();
+	public void afterClass(String envName) {
+		closeBrowserDriver(envName);
 	}
 
 	public int generateFakeNumber() {

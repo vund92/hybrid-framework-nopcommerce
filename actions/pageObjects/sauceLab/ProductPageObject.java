@@ -16,12 +16,13 @@ public class ProductPageObject extends BasePage {
 	WebDriver driver;
 
 	public ProductPageObject(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
 	}
 
 	public void selectItemInProductSortDropdown(String textItem) {
-		waitForElementClickable(driver, ProductPageUI.PRODUCT_CONTAINER_DROPDOWN);
-		selectItemInDefaultDropdown(driver, ProductPageUI.PRODUCT_CONTAINER_DROPDOWN, textItem);
+		waitForElementClickable(ProductPageUI.PRODUCT_CONTAINER_DROPDOWN);
+		selectItemInDefaultDropdown(ProductPageUI.PRODUCT_CONTAINER_DROPDOWN, textItem);
 	}
 
 	public boolean isProductNameSortByAscending() {
@@ -29,7 +30,7 @@ public class ProductPageObject extends BasePage {
 		ArrayList<String> productUIList = new ArrayList<String>();
 
 		// Lấy ra hết tất cả các text product name
-		List<WebElement> productNameText = getListWebElement(driver, ProductPageUI.PRODUCT_NAME_TEXT);
+		List<WebElement> productNameText = getListWebElement(ProductPageUI.PRODUCT_NAME_TEXT);
 
 		// Dùng vòng lặp để getText và add vào ArrayList trên
 		for (WebElement productName : productNameText) {
@@ -57,7 +58,7 @@ public class ProductPageObject extends BasePage {
 		ArrayList<String> productUIList = new ArrayList<String>();
 
 		// Lấy ra hết tất cả các text product name
-		List<WebElement> productNameText = getListWebElement(driver, ProductPageUI.PRODUCT_NAME_TEXT);
+		List<WebElement> productNameText = getListWebElement(ProductPageUI.PRODUCT_NAME_TEXT);
 
 		// Dùng vòng lặp để getText và add vào ArrayList trên
 		for (WebElement productName : productNameText) {
@@ -90,7 +91,7 @@ public class ProductPageObject extends BasePage {
 	}
 	
 	public boolean isProductNameSortByAscendingLambda() {
-		List<WebElement> elementLists = getListWebElement(driver, ProductPageUI.PRODUCT_NAME_TEXT);
+		List<WebElement> elementLists = getListWebElement(ProductPageUI.PRODUCT_NAME_TEXT);
 		List<String> names = elementLists.stream().map(n -> n.getText()).collect(Collectors.toList());
 		List<String> sortedNames = new ArrayList<String>(names);
 		Collections.sort(sortedNames);
@@ -98,7 +99,7 @@ public class ProductPageObject extends BasePage {
 	}
 
 	public boolean isProductNameSortByDescendingLambda() {
-		List<WebElement> elementLists = getListWebElement(driver, ProductPageUI.PRODUCT_NAME_TEXT);
+		List<WebElement> elementLists = getListWebElement(ProductPageUI.PRODUCT_NAME_TEXT);
 		List<String> names = elementLists.stream().map(n -> n.getText()).collect(Collectors.toList());
 		List<String> sortedNames = new ArrayList<String>(names);
 		Collections.sort(sortedNames);
@@ -111,7 +112,7 @@ public class ProductPageObject extends BasePage {
 		ArrayList<Float> productUIList = new ArrayList<Float>();
 
 		// Lấy ra hết tất cả các text product name
-		List<WebElement> productPriceText = getListWebElement(driver, ProductPageUI.PRODUCT_PRICE_TEXT);
+		List<WebElement> productPriceText = getListWebElement(ProductPageUI.PRODUCT_PRICE_TEXT);
 
 		// Dùng vòng lặp để getText và add vào ArrayList trên
 		for (WebElement productPrice : productPriceText) {
@@ -139,7 +140,7 @@ public class ProductPageObject extends BasePage {
 		ArrayList<Float> productUIList = new ArrayList<Float>();
 
 		// Lấy ra hết tất cả các text product name
-		List<WebElement> productPriceText = getListWebElement(driver, ProductPageUI.PRODUCT_PRICE_TEXT);
+		List<WebElement> productPriceText = getListWebElement(ProductPageUI.PRODUCT_PRICE_TEXT);
 
 		// Dùng vòng lặp để getText và add vào ArrayList trên
 		for (WebElement productPrice : productPriceText) {
@@ -171,11 +172,11 @@ public class ProductPageObject extends BasePage {
 	}
 
 	public boolean isProductPriceSortByAscendingNew(WebDriver driver) {
-		return isDataFloatSortedAscending(driver, ProductPageUI.PRODUCT_PRICE_TEXT);
+		return isDataFloatSortedAscending(ProductPageUI.PRODUCT_PRICE_TEXT);
 	}
 
 	public boolean isProductPriceSortByDescendingNew(WebDriver driver) {
-		return isDataFloatSortedDescending(driver, ProductPageUI.PRODUCT_PRICE_TEXT);
+		return isDataFloatSortedDescending(ProductPageUI.PRODUCT_PRICE_TEXT);
 	}
 
 }

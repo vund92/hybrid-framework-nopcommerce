@@ -38,7 +38,7 @@ public class Level_16_Share_Data_A extends BaseTest{
 		validPassword = Common_01_Register_End_User.password;
 		
 		log.info("Login - Step 01: Navigate to Login page"); 
-		loginPage = homePage.openLoginPage();
+		loginPage = registerPage.openLoginPage();
 		
 		log.info("Login - Step 02: Enter to Email textbox with value is '" + emailAddress + "'"); 
 		loginPage.inputToEmailTextbox(emailAddress);

@@ -66,10 +66,10 @@ public class Level_17_Custom_Close_Driver extends BaseTest {
 			log.info("Login - Step 09: Navigate to Login page");
 			homePage = registerPage.clickToLogoutLink();
 			log.info("Login - Step 09: Navigate to Login page");
-			loginPage = homePage.openLoginPage();
+			loginPage = registerPage.openLoginPage();
 		} else {
 			log.info("Login - Step 09: Navigate to Login page");
-			loginPage = homePage.openLoginPage();
+			loginPage = registerPage.openLoginPage();
 		}
 
 		log.info("Login - Step 10: Enter to Email textbox with value is '" + emailAddress + "'");
@@ -93,9 +93,10 @@ public class Level_17_Custom_Close_Driver extends BaseTest {
 
 	}
 
+	@Parameters({"envName"})
 	@AfterClass(alwaysRun = true)
-	public void afterClass() {
-		closeBrowserDriver();
+	public void afterClass(String envName) {
+		closeBrowserDriver(envName);
 	}
 
 	public int generateFakeNumber() {

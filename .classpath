@@ -64,5 +64,17 @@
 	<classpathentry kind="lib" path="libAllure/okio-1.14.1.jar"/>
 	<classpathentry kind="lib" path="libAllure/tika-core-1.20.jar"/>
 	<classpathentry kind="lib" path="librariesSeleniumTestNG/joda-time-2.0.jar"/>
+	<classpathentry kind="lib" path="libFaker/generex-1.0.2.jar"/>
+	<classpathentry kind="lib" path="libFaker/javafaker-1.0.1.jar"/>
+	<classpathentry kind="lib" path="libFaker/snakeyaml-1.23.jar"/>
+	<classpathentry kind="lib" path="libFaker/javafaker-1.0.1-sources.jar"/>
+	<classpathentry kind="lib" path="libOwner/hamcrest-all-1.3.jar"/>
+	<classpathentry kind="lib" path="libOwner/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="libOwner/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="libOwner/mockito-core-2.15.0.jar"/>
+	<classpathentry kind="lib" path="libOwner/owner-1.0.10.jar"/>
+	<classpathentry kind="lib" path="libJDBC/jtds-1.3.1.jar"/>
+	<classpathentry kind="lib" path="libJDBC/mysql-connector-java-8.0.28.jar"/>
+	<classpathentry kind="lib" path="libJDBC/mssql-jdbc-12.2.0.jre11.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

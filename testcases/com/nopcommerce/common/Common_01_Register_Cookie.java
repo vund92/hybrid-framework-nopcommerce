@@ -57,15 +57,12 @@ public class Common_01_Register_Cookie extends BaseTest {
 		if (homePage.isLoginLinkUndisplayed()) {
 			log.info("Pre-condition - Step 09: Navigate to Login page");
 			homePage = registerPage.clickToLogoutLink();
-			log.info("Pre-condition - Step 09: Navigate to Login page");
-			loginPage = homePage.openLoginPage();
+			log.info("Pre-condition - Step 10: Navigate to Login page");
+			loginPage = registerPage.openLoginPage();
 		} else {
-			log.info("Pre-condition - Step 09: Navigate to Login page");
-			loginPage = homePage.openLoginPage();
+			log.info("Pre-condition - Step 10: Navigate to Login page");
+			loginPage = registerPage.openLoginPage();
 		}
-
-		log.info("Pre-condition - Step 10: Navigate to Login page");
-		loginPage = homePage.openLoginPage();
 
 		log.info("Pre-condition - Step 11: Enter to Email textbox with value is '" + emailAddress + "'");
 		loginPage.inputToEmailTextbox(emailAddress);
@@ -76,7 +73,7 @@ public class Common_01_Register_Cookie extends BaseTest {
 		log.info("Pre-condition - Step 13: Click to Login button");
 		homePage = loginPage.clickToLoginButton();
 		
-		loggedCookies = homePage.getAllCookies(driver);
+		loggedCookies = homePage.getAllCookies();
 		
 		for(Cookie cookie : loggedCookies) {
 			System.out.println("Cookie at Common Class" + cookie);

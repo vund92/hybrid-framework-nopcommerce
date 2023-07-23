@@ -14,22 +14,23 @@ public class AdminLoginPageObject extends BasePage {
 	private WebDriver driver; 
 	
 	public AdminLoginPageObject(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
 	}
 	
 	public void inputToUsernameTextbox(String emailAddress) {
-		waitForElementVisible(driver, AdminLoginPageUI.EMAIL_TEXTBOX);
-		sendkeyToElement(driver, AdminLoginPageUI.EMAIL_TEXTBOX, emailAddress);
+		waitForElementVisible(AdminLoginPageUI.EMAIL_TEXTBOX);
+		sendkeyToElement(AdminLoginPageUI.EMAIL_TEXTBOX, emailAddress);
 	}
 
 	public void inputToPasswordTextbox(String password) {
-		waitForElementVisible(driver, AdminLoginPageUI.PASSWORD_TEXTBOX);
-		sendkeyToElement(driver, AdminLoginPageUI.PASSWORD_TEXTBOX, password);
+		waitForElementVisible(AdminLoginPageUI.PASSWORD_TEXTBOX);
+		sendkeyToElement(AdminLoginPageUI.PASSWORD_TEXTBOX, password);
 	}
 
 	public AdminDashboardPageObject clickToLoginButton() {
-		waitForElementClickable(driver, AdminLoginPageUI.LOGIN_BUTTON);
-		clickToElement(driver, AdminLoginPageUI.LOGIN_BUTTON);
+		waitForElementClickable(AdminLoginPageUI.LOGIN_BUTTON);
+		clickToElement(AdminLoginPageUI.LOGIN_BUTTON);
 		return PageGeneratorManager.getAdminDashboardPage(driver);
 	}
 	

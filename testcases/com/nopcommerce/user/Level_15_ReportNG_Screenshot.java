@@ -84,10 +84,10 @@ public class Level_15_ReportNG_Screenshot extends BaseTest{
 			log.info("Login - Step 00: Navigate to Login page"); 
 			homePage = registerPage.clickToLogoutLink();
 			log.info("Login - Step 01: Navigate to Login page"); 
-			loginPage = homePage.openLoginPage();
+			loginPage = registerPage.openLoginPage();
 		} else {
 			log.info("Login - Step 01: Navigate to Login page"); 
-			loginPage = homePage.openLoginPage();
+			loginPage = registerPage.openLoginPage();
 		}
 		
 		log.info("Login - Step 02: Enter to Email textbox with value is '" + emailAddress + "'"); 

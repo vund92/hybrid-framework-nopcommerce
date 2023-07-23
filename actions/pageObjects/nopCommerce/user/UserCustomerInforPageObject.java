@@ -12,13 +12,14 @@ public class UserCustomerInforPageObject extends BasePage {
 	private WebDriver driver; 
 	
 	public UserCustomerInforPageObject(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
 	}
 
 	@Step("Login - Check 'Customer Infor' page is displayed")
 	public boolean isCustomerInforPageDisplayed() {
-		waitForAllElementVisible(driver, UserCustomerInforPageUI.CUSTOMER_INFOR_HEADER);
-		return isElementDisplayed(driver, UserCustomerInforPageUI.CUSTOMER_INFOR_HEADER);
+		waitForAllElementVisible(UserCustomerInforPageUI.CUSTOMER_INFOR_HEADER);
+		return isElementDisplayed(UserCustomerInforPageUI.CUSTOMER_INFOR_HEADER);
 	}
 
 //	public AddressPageObject openAddressPage() {

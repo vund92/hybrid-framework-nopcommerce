@@ -13,38 +13,39 @@ public class UserLoginPageObject extends BasePage {
 	private WebDriver driver; 
 	
 	public UserLoginPageObject(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
 	}
 
 	@Step("Login - Click to Login button")
 	public UserHomePageObject clickToLoginButton() {
-		waitForElementClickable(driver, UserLoginPageUI.LOGIN_BUTTON);
-		clickToElement(driver, UserLoginPageUI.LOGIN_BUTTON);
+		waitForElementClickable(UserLoginPageUI.LOGIN_BUTTON);
+		clickToElement(UserLoginPageUI.LOGIN_BUTTON);
 		return PageGeneratorManager.getUserHomePage(driver);
 	}
 
 	@Step("Login - Enter to Email textbox with value is {0}")
 	public void inputToEmailTextbox(String invalidEmail) {
-		waitForElementVisible(driver, UserLoginPageUI.EMAIL_TEXTBOX);
-		sendkeyToElement(driver, UserLoginPageUI.EMAIL_TEXTBOX, invalidEmail);
+		waitForElementVisible(UserLoginPageUI.EMAIL_TEXTBOX);
+		sendkeyToElement(UserLoginPageUI.EMAIL_TEXTBOX, invalidEmail);
 		
 	}
 	
 	@Step("Login - Enter to Password textbox with value is {0}")
 	public void inputToPasswordTextbox(String password) {
-		waitForElementVisible(driver, UserLoginPageUI.PASSWORD_TEXTBOX);
-		sendkeyToElement(driver, UserLoginPageUI.PASSWORD_TEXTBOX, password);
+		waitForElementVisible(UserLoginPageUI.PASSWORD_TEXTBOX);
+		sendkeyToElement(UserLoginPageUI.PASSWORD_TEXTBOX, password);
 		
 	}
 	
 	public String getErrorMessageUnsuccessfully() {
-		waitForElementVisible(driver, UserLoginPageUI.UNSUCCESSFUL_ERROR_MESSAGE);
-		return getElementText(driver, UserLoginPageUI.UNSUCCESSFUL_ERROR_MESSAGE);
+		waitForElementVisible(UserLoginPageUI.UNSUCCESSFUL_ERROR_MESSAGE);
+		return getElementText(UserLoginPageUI.UNSUCCESSFUL_ERROR_MESSAGE);
 	}
 
 	public String getErrorMessageAtEmailTextbox() {
-		waitForElementVisible(driver, UserLoginPageUI.EMAIL_ERROR_MESSAGE);
-		return getElementText(driver, UserLoginPageUI.EMAIL_ERROR_MESSAGE);
+		waitForElementVisible(UserLoginPageUI.EMAIL_ERROR_MESSAGE);
+		return getElementText(UserLoginPageUI.EMAIL_ERROR_MESSAGE);
 	}
 	
 	public UserHomePageObject loginAsUser(String emailAddress, String password) {

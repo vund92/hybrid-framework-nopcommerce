@@ -37,7 +37,7 @@ public class Level_11_Upload_Files extends BaseTest{
 	@Test
 	public void Upload_01_One_File_Per_Time() {
 		// Step 01 Load single file
-		homePage.uploadMultipleFiles(driver, csharpFileName);
+		homePage.uploadMultipleFiles(csharpFileName);
 		
 		// Step 02 - Verify single file loaded success 
 		Assert.assertTrue(homePage.isFileLoadedByName(csharpFileName));
@@ -55,7 +55,7 @@ public class Level_11_Upload_Files extends BaseTest{
 	@Test
 	public void Upload_02_Multiple_File_Per_Time() {
 		// Step 01 - Load multiple file
-		homePage.uploadMultipleFiles (driver, multipleFileNames);
+		homePage.uploadMultipleFiles(multipleFileNames);
 		
 		// Step 02 - Verify multiple file loaded success 
 		Assert.assertTrue(homePage.isFileLoadedByName(csharpFileName)); 

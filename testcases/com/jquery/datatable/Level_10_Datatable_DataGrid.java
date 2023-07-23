@@ -52,7 +52,7 @@ public class Level_10_Datatable_DataGrid extends BaseTest{
 	
 	//@Test
 	public void Table_02_Enter_To_Header() {
-		homePage.refreshCurrentPage(driver);
+		homePage.refreshCurrentPage();
 		
 		homePage.enterToHeaderTextboxByLabel("Country", "Argentina"); 
 		homePage.enterToHeaderTextboxByLabel("Females", "338282");

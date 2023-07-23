@@ -66,10 +66,10 @@ public class Level_16_Share_Data_B extends BaseTest{
 			log.info("Pre-condition - Step 09: Navigate to Login page"); 
 			homePage = registerPage.clickToLogoutLink();
 			log.info("Pre-condition - Step 09: Navigate to Login page"); 
-			loginPage = homePage.openLoginPage();
+			loginPage = registerPage.openLoginPage();
 		} else {
 			log.info("Pre-condition - Step 09: Navigate to Login page"); 
-			loginPage = homePage.openLoginPage();
+			loginPage = registerPage.openLoginPage();
 		}
 		
 		log.info("Pre-condition - Step 10: Enter to Email textbox with value is '" + emailAddress + "'"); 

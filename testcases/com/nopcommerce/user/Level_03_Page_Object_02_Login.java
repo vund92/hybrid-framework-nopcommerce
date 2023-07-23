@@ -76,7 +76,7 @@ public class Level_03_Page_Object_02_Login {
 	@Test
 	public void Login_01_Empty_Data() {
 		System.out.println("Login_01_Empty_Data - Step 1: Click to Login link");
-		homePage.openLoginPage();
+		registerPage.openLoginPage();
 		
 		//Từ trang Home - Click Login Link -> Qua trang Login
 		loginPage = new UserLoginPageObject(driver);
@@ -91,7 +91,7 @@ public class Level_03_Page_Object_02_Login {
 	@Test
 	public void Login_02_Invalid_Email() {
 		System.out.println("Login_02_Invalid_Email - Step 1: Click to Login link");
-		homePage.openLoginPage();
+		registerPage.openLoginPage();
 		
 		//Từ trang Home - Click Login Link -> Qua trang Login
 		loginPage = new UserLoginPageObject(driver);
@@ -108,7 +108,7 @@ public class Level_03_Page_Object_02_Login {
 	@Test
 	public void Login_03_Email_Not_Found() {
 		System.out.println("Login_03_Email_Not_Found - Step 1: Click to Login link");
-		homePage.openLoginPage();
+		registerPage.openLoginPage();
 		
 		//Từ trang Home - Click Login Link -> Qua trang Login
 		loginPage = new UserLoginPageObject(driver);
@@ -125,7 +125,7 @@ public class Level_03_Page_Object_02_Login {
 	@Test
 	public void Login_04_Existing_Email_Empty_Password() {
 		System.out.println("Login_04_Existing_Email_Empty_Password - Step 1: Click to Login link");
-		homePage.openLoginPage();
+		registerPage.openLoginPage();
 		
 		//Từ trang Home - Click Login Link -> Qua trang Login
 		loginPage = new UserLoginPageObject(driver);
@@ -144,7 +144,7 @@ public class Level_03_Page_Object_02_Login {
 	@Test
 	public void Login_05_Existing_Email_Incorrect_Password() {
 		System.out.println("Login_05_Existing_Email_Incorrect_Password - Step 1: Click to Login link");
-		homePage.openLoginPage();
+		registerPage.openLoginPage();
 		
 		//Từ trang Home - Click Login Link -> Qua trang Login
 		loginPage = new UserLoginPageObject(driver);
@@ -163,7 +163,7 @@ public class Level_03_Page_Object_02_Login {
 	@Test
 	public void Login_06_Valid_Email_Password() {
 		System.out.println("Login_06_Valid_Email_Password - Step 1: Click to Login link");
-		homePage.openLoginPage();
+		registerPage.openLoginPage();
 		
 		//Từ trang Home - Click Login Link -> Qua trang Login
 		loginPage = new UserLoginPageObject(driver);

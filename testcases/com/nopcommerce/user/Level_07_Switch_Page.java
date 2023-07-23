@@ -67,7 +67,7 @@ public class Level_07_Switch_Page extends BaseTest{
 	
 	@Test
 	public void User_02_Login() {
-		loginPage = homePage.openLoginPage();
+		loginPage = registerPage.openLoginPage();
 		
 		loginPage.inputToEmailTextbox(emailAddress);
 		loginPage.inputToPasswordTextbox(password);

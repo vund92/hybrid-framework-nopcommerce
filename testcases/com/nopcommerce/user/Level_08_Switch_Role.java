@@ -10,6 +10,7 @@ import pageObjects.nopCommerce.admin.AdminLoginPageObject;
 import pageObjects.nopCommerce.user.UserCustomerInforPageObject;
 import pageObjects.nopCommerce.user.UserHomePageObject;
 import pageObjects.nopCommerce.user.UserLoginPageObject;
+import pageObjects.nopCommerce.user.UserRegisterPageObject;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -28,6 +29,7 @@ public class Level_08_Switch_Role extends BaseTest{
 	private AdminLoginPageObject adminLoginPage;
 	private AdminDashboardPageObject adminDashboardPage;
 	private UserCustomerInforPageObject userCustomerInfoPage;
+	private UserRegisterPageObject registerPage;
 	String userEmailAddress, userPassword, adminEmailAddress, adminPassword;
 
 	@Parameters("browser")     
@@ -45,7 +47,7 @@ public class Level_08_Switch_Role extends BaseTest{
   
 	@Test
 	public void Role_01_User_To_Admin() {
-		userLoginPage = userHomePage.openLoginPage();
+		userLoginPage = registerPage.openLoginPage();
 		
 		// Login as User role
 		userHomePage = userLoginPage.loginAsUser(userEmailAddress, userPassword);
@@ -58,7 +60,7 @@ public class Level_08_Switch_Role extends BaseTest{
 		userHomePage = userCustomerInfoPage.clickToLogoutLinkAtUserPage(driver);
 		
 		//User Home Page -> Open Admin Page -> Login Page (Admin)
-		userHomePage.openPageUrl(driver, GlobalConstants.ADMIN_DEV_URL);
+		userHomePage.openPageUrl(GlobalConstants.ADMIN_DEV_URL);
 		adminLoginPage = PageGeneratorManager.getAdminLoginPage(driver);
 		
 		// Login as Admin role
@@ -73,11 +75,11 @@ public class Level_08_Switch_Role extends BaseTest{
 	@Test
 	public void Role_02_Admin_To_User() {
 		//Login Page(Admin) -> Open User URL -> Home Page (User)
-		adminLoginPage.openPageUrl(driver, GlobalConstants.PORTAL_DEV_URL);
+		adminLoginPage.openPageUrl(GlobalConstants.PORTAL_DEV_URL);
 		userHomePage = PageGeneratorManager.getUserHomePage(driver);
 		
 		//Home Page -> Login Page (User)
-		userLoginPage = userHomePage.openLoginPage();
+		userLoginPage = registerPage.openLoginPage();
 		
 		//Login as User role
 		userHomePage = userLoginPage.loginAsUser(userEmailAddress, userPassword);

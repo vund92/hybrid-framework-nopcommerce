@@ -1,19 +1,12 @@
-1689239355903	geckodriver	INFO	Listening on 127.0.0.1:58865
-1689239356188	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\WELCOME\\AppData\\Local\\Temp\\rust_mozprofilesAdDRH"
+1689973859263	geckodriver	INFO	Listening on 127.0.0.1:26534
+1689973859378	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\WELCOME\\AppData\\Local\\Temp\\rust_mozprofile8z0eGw"
 console.warn: services.settings: Ignoring preference override of remote settings server
 console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-1689239356491	Marionette	INFO	Marionette enabled
+1689973859646	Marionette	INFO	Marionette enabled
 Dynamically enable window occlusion 0
-1689239356795	Marionette	INFO	Listening on port 60522
-Read port: 60522
+1689973859921	Marionette	INFO	Listening on port 59375
+Read port: 59375
 console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:8081."
 console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:8081."
-console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:8081."
-console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:8081."
-1689239386481	Marionette	INFO	Stopped listening on port 60522
+1689973863750	Marionette	INFO	Stopped listening on port 59375
 Dynamically enable window occlusion 1
-console.error: "DEPRECATION WARNING: Calling FileUtils.getDir(..., ..., true) causes main thread I/O and should be avoided especially during startup/shutdown\nYou may find more details about this deprecation at: https://bugzilla.mozilla.org/show_bug.cgi?id=921157\nresource://gre/modules/FileUtils.sys.mjs 62 FileUtils_getDir\nresource://gre/modules/UpdateService.sys.mjs 1054 getUpdateDirCreate\nresource://gre/modules/UpdateService.sys.mjs 1093 getUpdateFile\nresource://gre/modules/UpdateService.sys.mjs 4440 UM__loadXMLFileIntoArray\nresource://gre/modules/UpdateService.sys.mjs 4274 UpdateManager\nresource://gre/modules/XPCOMUtils.sys.mjs 137 defineLazyServiceGetter/<\nresource://gre/modules/UpdateService.sys.mjs 3374 get _pingSuffix\nresource://gre/modules/UpdateService.sys.mjs 3417 AUS__checkForBackgroundUpdates\nresource://gre/modules/UpdateService.sys.mjs 3362 AUS_notify\nresource://gre/modules/UpdateTimerManager.sys.mjs 199 TM_notify/</<\nresource://gre/modules/AsyncShutdown.sys.mjs 575 observe\n"
-console.error: "DEPRECATION WARNING: Calling FileUtils.getDir(..., ..., true) causes main thread I/O and should be avoided especially during startup/shutdown\nYou may find more details about this deprecation at: https://bugzilla.mozilla.org/show_bug.cgi?id=921157\nresource://gre/modules/FileUtils.sys.mjs 62 FileUtils_getDir\nresource://gre/modules/UpdateService.sys.mjs 1054 getUpdateDirCreate\nresource://gre/modules/UpdateService.sys.mjs 1157 getReadyUpdateDir\nresource://gre/modules/UpdateService.sys.mjs 4281 UpdateManager\nresource://gre/modules/XPCOMUtils.sys.mjs 137 defineLazyServiceGetter/<\nresource://gre/modules/UpdateService.sys.mjs 3374 get _pingSuffix\nresource://gre/modules/UpdateService.sys.mjs 3417 AUS__checkForBackgroundUpdates\nresource://gre/modules/UpdateService.sys.mjs 3362 AUS_notify\nresource://gre/modules/UpdateTimerManager.sys.mjs 199 TM_notify/</<\nresource://gre/modules/AsyncShutdown.sys.mjs 575 observe\n"
-console.error: "DEPRECATION WARNING: Calling FileUtils.getDir(..., ..., true) causes main thread I/O and should be avoided especially duJavarinSg crstairtup/shuptdowt enrro\nYou mary: r find more deetails saboource:/u/gret t/moduhis deprleecation at: httpss:/UpdateSer//bvicugzilla.e.mozilla.osys.mjs, line 5371: rgTy/show_bpeErugro.cr:gi r?id=eque921157\snresourt.chce:/ann/gre/modulesel is/F nullileU
-tils.sys.mjs 62 FileUtils_getDir\nresource://gre/modules/UpdateService.sys.mjs 1054 getUpdateDirCreate\nresource://gre/modules/UpdateService.sys.mjs 1093 getUpdateFile\nresource://gre/modules/UpdateService.sys.mjs 771 getCanApplyUpdates\nresource://gre/modules/UpdateService.sys.mjs 3425 AUS__checkForBackgroundUpdates\nresource://gre/modules/UpdateService.sys.mjs 3362 AUS_notify\nresource://gre/modules/UpdateTimerManager.sys.mjs 199 TM_notify/</<\nresource://gre/modules/AsyncShutdown.sys.mjs 575 observe\n"
-JavaScript error: resource://gre/modules/AddonManager.sys.mjs, line 1250: NS_ERROR_NOT_INITIALIZED: AddonManager is not initialized

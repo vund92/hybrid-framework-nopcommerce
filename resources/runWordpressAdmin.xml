@@ -17,7 +17,8 @@
 		<parameter name="browser" value="firefox" />
 
 		<classes>
-			<class name="com.wordpress.admin.Post_01_Create_Read_Update_Delete_Search" />
+			<!--<class name="com.wordpress.admin.Post_01_Create_Read_Update_Delete_Search" /> -->
+			<class name="com.wordpress.admin.User_01_View_User" />
 		</classes>
 
 		<!-- <packages>

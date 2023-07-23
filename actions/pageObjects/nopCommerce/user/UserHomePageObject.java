@@ -6,45 +6,40 @@ import commons.BasePage;
 import commons.PageGeneratorManager;
 import io.qameta.allure.Step;
 import pageUIs.nopCommerce.user.UserHomePageUI;
+import pageUIs.nopCommerce.user.UserRegisterPageUI;
 
 public class UserHomePageObject extends BasePage {
 	
 	private WebDriver driver; 
 	
 	public UserHomePageObject(WebDriver driver) {
+		super(driver);
 		this.driver = driver;
 	}
 
 	@Step("Register - Navigate to 'Register' page")
 	public UserRegisterPageObject openRegisterPage() {
-		waitForElementClickable(driver, UserHomePageUI.REGISTER_LINK);
-		clickToElement(driver, UserHomePageUI.REGISTER_LINK);
+		waitForElementClickable(UserHomePageUI.REGISTER_LINK);
+		clickToElement(UserHomePageUI.REGISTER_LINK);
 		return PageGeneratorManager.getUserRegisterPage(driver);
-	}
-
-	@Step("Login - Navigate to 'Login' page")
-	public UserLoginPageObject openLoginPage() {
-		waitForElementClickable(driver, UserHomePageUI.LOGIN_LINK);
-		clickToElement(driver, UserHomePageUI.LOGIN_LINK);
-		return PageGeneratorManager.getUserLoginPage(driver);
 	}
 
 	@Step("Login - Check 'My Account' link is displayed")
 	public boolean isMyAccountLinkDisplayed() {
-		waitForElementVisible(driver, UserHomePageUI.MY_ACCOUNT_LINK);
-		return isElementDisplayed(driver, UserHomePageUI.MY_ACCOUNT_LINK);
+		waitForElementVisible(UserHomePageUI.MY_ACCOUNT_LINK);
+		return isElementDisplayed(UserHomePageUI.MY_ACCOUNT_LINK);
 	}
 
 	@Step("Login - Navigate to 'My Account' page")
 	public UserCustomerInforPageObject openMyAccountPage() {
-		waitForElementClickable(driver, UserHomePageUI.MY_ACCOUNT_LINK);
-		clickToElement(driver, UserHomePageUI.MY_ACCOUNT_LINK);
+		waitForElementClickable(UserHomePageUI.MY_ACCOUNT_LINK);
+		clickToElement(UserHomePageUI.MY_ACCOUNT_LINK);
 		return PageGeneratorManager.getUserCustomerInforPage(driver);
 	}
 	
 	public boolean isLoginLinkUndisplayed() {
-		waitForElementVisible(driver, UserHomePageUI.LOGIN_LINK);
-		return isElementUndisplayed(driver, UserHomePageUI.LOGIN_LINK);
+		waitForElementVisible(UserRegisterPageUI.LOGIN_LINK);
+		return isElementUndisplayed(UserRegisterPageUI.LOGIN_LINK);
 	}
 
 }
