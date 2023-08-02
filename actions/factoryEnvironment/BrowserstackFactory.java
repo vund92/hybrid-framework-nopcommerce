@@ -34,7 +34,7 @@ public class BrowserstackFactory {
 		capability.setCapability("resolution", "1920x1080");
 		capability.setCapability("name", "Run on " + osName + " | " + osVersion + " | " + browserName);
 		try {
-			driver = new RemoteWebDriver(new URL(GlobalConstants.BROWSER_STACK_URL), capability);
+			driver = new RemoteWebDriver(new URL(GlobalConstants.getGlobalConstants().getBrowserStackUrl()), capability);
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}

@@ -24,7 +24,7 @@ import org.testng.annotations.AfterClass;
 public class Level_23_Grid extends BaseTest {
 	Environment environment;
 
-	@Parameters({"browser", "environment", "osName", "ipAddress", "port"})
+	@Parameters({"browser", "serverName", "osName", "ipAddress", "port"})
 	@BeforeClass
 	public void beforeClass(String browserName, String environmentName, String osName, String ipAddress, String port) {
 		ConfigFactory.setProperty("env", environmentName);

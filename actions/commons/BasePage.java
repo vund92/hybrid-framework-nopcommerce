@@ -356,9 +356,9 @@ public class BasePage {
 
 	public boolean isElementUndisplayed(String locatorType) {
 		// System.out.println("Start time = " + new Date().toString());
-		overrideImplicitTimeout(GlobalConstants.SHORT_TIMEOUT);
+		overrideImplicitTimeout(shortTimeout);
 		List<WebElement> elements = getListWebElement(locatorType);
-		overrideImplicitTimeout(GlobalConstants.LONG_TIMEOUT);
+		overrideImplicitTimeout(longTimeout);
 		if (elements.size() == 0) {
 			// System.out.println("Case 3 - Element not in DOM");
 			// System.out.println("End time = " + new Date().toString());
@@ -377,9 +377,9 @@ public class BasePage {
 
 	public boolean isElementUndisplayed(String locator, String... dynamicValues) {
 		// System.out.println("Start time = " + new Date().toString());
-		overrideImplicitTimeout(GlobalConstants.SHORT_TIMEOUT);
+		overrideImplicitTimeout(shortTimeout);
 		List<WebElement> elements = getListWebElement(getDynamicXpath(locator, dynamicValues));
-		overrideImplicitTimeout(GlobalConstants.LONG_TIMEOUT);
+		overrideImplicitTimeout(longTimeout);
 		if (elements.size() == 0) {
 			// System.out.println("Case 3 - Element not in DOM");
 			// System.out.println("End time = " + new Date().toString());
@@ -643,7 +643,7 @@ public class BasePage {
 	public void uploadMultipleFiles(String... fileNames) {
 		// Duong dan cua thu muc uploadFiles: Windows/ MAC/ Linux
 		// String filePath = System.getProperty("user.dir") + "\\uploadFiles\\";
-		String filePath = GlobalConstants.UPLOAD_FILE;
+		String filePath = GlobalConstants.getGlobalConstants().getUploadFile();
 		String fullFileName = "";
 		for (String file : fileNames) {
 			fullFileName = fullFileName + filePath + file + "\n";
@@ -927,6 +927,6 @@ public class BasePage {
 		return date;
 	}
 
-	private long longTimeout = GlobalConstants.LONG_TIMEOUT;
-	private long shortTimeout = GlobalConstants.SHORT_TIMEOUT;
+	private long longTimeout = GlobalConstants.getGlobalConstants().getLongTimeout();
+	private long shortTimeout = GlobalConstants.getGlobalConstants().getShortTimeout();
 }

@@ -25,7 +25,7 @@ import org.testng.annotations.AfterClass;
 public class Level_24_Browser_Factory extends BaseTest {
 	Environment environment;
 
-	@Parameters({ "envName", "serverName", "browser", "ipAddress", "portNumber", "osName", "osVersion" })
+	@Parameters({ "envName", "serverName", "browser", "ipAddress", "port", "osName", "osVersion" })
 	@BeforeClass
 	public void beforeClass(@Optional("local") String envName, @Optional("dev") String serverName,
 			@Optional("chrome") String browserName, @Optional("localhost") String ipAddress,
@@ -35,6 +35,8 @@ public class Level_24_Browser_Factory extends BaseTest {
 //		environment = ConfigFactory.create(Environment.class);
 
 		driver = getBrowserDriver(envName, serverName, browserName, ipAddress, portNumber, osName, osVersion);
+		
+		System.out.println("Luong id: " + Thread.currentThread().getId() + " - Luong name: " + Thread.currentThread().getName());
 
 //		System.out.println(environment.appUrl());
 //		System.out.println(environment.appPassword());
@@ -91,7 +93,7 @@ public class Level_24_Browser_Factory extends BaseTest {
 		registerPage.clickToButtonByText("Register");
 
 		log.info("Register - Step 08: Verify register success message is displayed");
-		Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed...");
+		Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
 	}
 
 	@Test
@@ -118,13 +120,13 @@ public class Level_24_Browser_Factory extends BaseTest {
 		homePage = PageGeneratorManager.getUserHomePage(driver);
 
 		log.info("Login Step 05: Verify 'My Account' link is displayed");
-		Assert.assertFalse(homePage.isMyAccountLinkDisplayed());
+		verifyTrue(homePage.isMyAccountLinkDisplayed());
 
 		log.info("Login Step 06: Navigate to 'My Account' page");
 		customerInforPage = homePage.openMyAccountPage();
 
 		log.info("Login Step 06: Verify 'Customer Infor' page is displayed");
-		Assert.assertFalse(customerInforPage.isCustomerInforPageDisplayed());
+		verifyTrue(customerInforPage.isCustomerInforPageDisplayed());
 	}
 
 	@Test
@@ -133,16 +135,16 @@ public class Level_24_Browser_Factory extends BaseTest {
 		customerInforPage = homePage.openMyAccountPage();
 
 		log.info("My Account Step 02: Verify 'Customer Infor' page is displayed");
-		Assert.assertTrue(customerInforPage.isCustomerInforPageDisplayed());
+		verifyTrue(customerInforPage.isCustomerInforPageDisplayed());
 
 		log.info("My Account Step 03: Verify 'First Name' value is correctly");
-		Assert.assertEquals(customerInforPage.getTextboxValueByID("FirstName"), firstName);
+		verifyEquals(customerInforPage.getTextboxValueByID("FirstName"), firstName);
 
 		log.info("My Account Step 04: Verify 'Last Name' value is correctly");
-		Assert.assertEquals(customerInforPage.getTextboxValueByID("LastName"), lastName);
+		verifyEquals(customerInforPage.getTextboxValueByID("LastName"), lastName);
 
 		log.info("My Account Step 05: Verify 'Email' value is correctly");
-		Assert.assertEquals(customerInforPage.getTextboxValueByID("Email"), emailAddress);
+		verifyEquals(customerInforPage.getTextboxValueByID("Email"), emailAddress);
 	}
 
 	@Parameters({"envName"})
@@ -156,7 +158,7 @@ public class Level_24_Browser_Factory extends BaseTest {
 		return rand.nextInt(9999);
 	}
 
-	WebDriver driver;
+	WebDriver driver; //Neu ko dung Thread local thì comment dong nay lai cung duoc, con neu co Thread local thì phai dung toi no
 	private DataHelper dataFaker;
 	private UserHomePageObject homePage;
 	private UserRegisterPageObject registerPage;

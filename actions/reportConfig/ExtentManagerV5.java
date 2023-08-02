@@ -10,7 +10,7 @@ public class ExtentManagerV5 {
 	public static final ExtentReports extentReports = new ExtentReports();
 
 	public synchronized static ExtentReports createExtentReports() {
-		ExtentSparkReporter reporter = new ExtentSparkReporter(GlobalConstants.PROJECT_PATH + "/extentReportV5/ExtentReportV5.html");
+		ExtentSparkReporter reporter = new ExtentSparkReporter(GlobalConstants.getGlobalConstants().getProjectPath() + "/extentReportV5/ExtentReportV5.html");
 		reporter.config().setReportName("NopCommerce HTML Report");
 		reporter.config().setDocumentTitle("NopCommerce HTML Report");
 		reporter.config().setTimelineEnabled(true);
@@ -21,7 +21,7 @@ public class ExtentManagerV5 {
 		extentReports.setSystemInfo("Company", "Automation FC");
 		extentReports.setSystemInfo("Project", "NopCommerce");
 		extentReports.setSystemInfo("Team", "Basus VN");
-		extentReports.setSystemInfo("JDK version", GlobalConstants.JAVA_VERSION);
+		extentReports.setSystemInfo("JDK version", GlobalConstants.getGlobalConstants().getJavaVersion());
 		return extentReports;
 	}
 }

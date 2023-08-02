@@ -29,6 +29,8 @@ import org.testng.annotations.AfterClass;
 
 public class Level_09_Dynamic_Locator extends BaseTest{
  
+	WebDriver driver; //Neu ko dung Thread local thì comment dong nay lai cung duoc, con neu co Thread local thì phai dung toi no
+	
 	private UserHomePageObject homePage;
 	private UserRegisterPageObject registerPage;
 	private UserLoginPageObject loginPage;

@@ -17,6 +17,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
 public class Level_10_Datatable_DataGrid extends BaseTest{
+	WebDriver driver; //Neu ko dung Thread local thì comment dong nay lai cung duoc, con neu co Thread local thì phai dung toi no
 	HomePageObject homePage;
 	List<String> actualAllCountryValues;
 	List<String> expectedAllCountryValues;

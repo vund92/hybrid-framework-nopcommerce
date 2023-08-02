@@ -14,12 +14,14 @@ import org.testng.annotations.Parameters;
 import static org.testng.Assert.assertEquals;
 
 import java.util.Random;
+
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 
 //@Listeners(org.uncommons.reportng.HTMLReporter.class) --> neu goi Listener o day thi cai nay chi danh cho class nay thoi, 
 // con muon no app dung cho tat ca cac class thi de no trong file runNopCommerce.xml
 public class Level_17_Custom_Close_Driver extends BaseTest {
-
+	WebDriver driver; //Neu ko dung Thread local thì comment dong nay lai cung duoc, con neu co Thread local thì phai dung toi no
 	private UserHomePageObject homePage;
 	private UserRegisterPageObject registerPage;
 	private UserLoginPageObject loginPage;

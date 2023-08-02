@@ -15,10 +15,12 @@ import org.testng.annotations.Parameters;
 import static org.testng.Assert.assertFalse;
 
 import java.util.Random;
+
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 
 public class Level_15_ExtentV3_Screenshot extends BaseTest{
- 
+	WebDriver driver; //Neu ko dung Thread local thì comment dong nay lai cung duoc, con neu co Thread local thì phai dung toi no
 	private UserHomePageObject homePage;
 	private UserRegisterPageObject registerPage;
 	private UserLoginPageObject loginPage;

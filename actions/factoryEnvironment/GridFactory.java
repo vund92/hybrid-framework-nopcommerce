@@ -19,6 +19,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import commons.GlobalConstants;
+import factoryBrowser.BrowserList;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.github.bonigarcia.wdm.config.Architecture;
 
@@ -35,50 +36,50 @@ public class GridFactory {
 	}
 
 	public WebDriver createDriver() {
-		Browser browser = Browser.valueOf(browserName.toUpperCase());
+		BrowserList browser = BrowserList.valueOf(browserName.toUpperCase());
 		DesiredCapabilities capability = null;
-		if (browser == Browser.FIREFOX) {
+		if (browser == BrowserList.FIREFOX) {
 			WebDriverManager.firefoxdriver().setup();
 			capability = DesiredCapabilities.firefox();
 			capability.setBrowserName("firefox");
-			capability.setPlatform(Platform.WINDOWS);
+			capability.setPlatform(Platform.ANY);
 			FirefoxOptions options = new FirefoxOptions();
 			options.merge(capability);
-		} else if (browser == Browser.CHROME) {
+		} else if (browser == BrowserList.CHROME) {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			capability = DesiredCapabilities.chrome();
 			capability.setBrowserName("chrome");
-			capability.setPlatform(Platform.WINDOWS);
+			capability.setPlatform(Platform.ANY);
 			options.merge(capability);
-		} else if (browser == Browser.OPERA) {
+		} else if (browser == BrowserList.OPERA) {
 			WebDriverManager.operadriver().setup();
 			driver = new OperaDriver();
-		} else if (browser == Browser.EDGE_CHROMIUM) {
+		} else if (browser == BrowserList.EDGE_CHROMIUM) {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
-		} else if (browser == Browser.COC_COC) {
+		} else if (browser == BrowserList.COC_COC) {
 			WebDriverManager.chromedriver().driverVersion("91.0.4472.101").setup();
 			ChromeOptions options = new ChromeOptions();
 			options.setBinary("C:/Program Files (x86)/CocCoc/Browser/Application/browser.exe");
 			driver = new ChromeDriver(options);
-		} else if (browser == Browser.EDGE_CHROMIUM) {
+		} else if (browser == BrowserList.EDGE_CHROMIUM) {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
-		} else if (browser == Browser.EDGE_LEGACY) {
+		} else if (browser == BrowserList.EDGE_LEGACY) {
 			driver = new EdgeDriver();
-		} else if (browser == Browser.IE) {
+		} else if (browser == BrowserList.IE) {
 			WebDriverManager.iedriver().architecture(Architecture.X64).driverVersion("3.141.59").setup();
 			driver = new InternetExplorerDriver();
-		} else if (browser == Browser.SAFARI) {
+		} else if (browser == BrowserList.SAFARI) {
 			driver = new SafariDriver();
-		} else if (browser == Browser.H_CHROME) {
+		} else if (browser == BrowserList.H_CHROME) {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.setHeadless(true);
 			options.addArguments("window-size=1920x1080");
 			driver = new ChromeDriver(options);
-		} else if (browser == Browser.H_FIREFOX) {
+		} else if (browser == BrowserList.H_FIREFOX) {
 			WebDriverManager.firefoxdriver().setup();
 			FirefoxOptions options = new FirefoxOptions();
 			options.setHeadless(true);
