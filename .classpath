@@ -14,8 +14,11 @@
 	<classpathentry kind="lib" path="libLog4J/commons-codec-1.11.jar"/>
 	<classpathentry kind="lib" path="libLog4J/commons-logging-1.2.jar"/>
 	<classpathentry kind="lib" path="libLog4J/log4j-1.2.16.jar"/>
-	<classpathentry kind="lib" path="librariesSeleniumTestNG/client-combined-3.141.59-sources.jar"/>
-	<classpathentry kind="lib" path="librariesSeleniumTestNG/selenium-server-standalone-3.141.59.jar"/>
+	<classpathentry kind="lib" path="librariesSeleniumTestNG/selenium-server-standalone-3.141.59.jar" sourcepath="E:/Fullstack Selenium in Java/06 - Cucumber Framework/librariesSeleniumTestNG/client-combined-3.141.59-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/E:/Fullstack%20Selenium%20in%20Java/06%20-%20Cucumber%20Framework/librariesSeleniumTestNG/client-combined-3.141.59-sources.jar!/"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="lib" path="libWebDriverManager/bcpkix-jdk15on-1.64.jar"/>
 	<classpathentry kind="lib" path="libWebDriverManager/bcprov-jdk15on-1.64.jar"/>
 	<classpathentry kind="lib" path="libWebDriverManager/commons-compress-1.21.jar"/>
